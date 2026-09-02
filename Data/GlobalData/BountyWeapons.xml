@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- bounty weapoms-->
+
+	<WeaponTemplate
+		id="EmitterBounty1"
+		Name="EmitterBounty1"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_EmitterBounty1" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="EmitterBounty2"
+		Name="EmitterBounty2"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_EmitterBounty2" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="EmitterBounty3"
+		Name="EmitterBounty3"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_EmitterBounty3" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="EmitterBounty4"
+		Name="EmitterBounty4"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_EmitterBounty4" />
+		</Nuggets>
+	</WeaponTemplate>
+
+
+	<WeaponTemplate
+		id="EmitterBounty5"
+		Name="EmitterBounty5"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_EmitterBounty5" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="EmitterBounty6"
+		Name="EmitterBounty6"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_EmitterBounty6" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="EmitterBounty7"
+		Name="EmitterBounty7"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_EmitterBounty7" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="EmitterBounty8"
+		Name="EmitterBounty8"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_EmitterBounty8" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- ShatBounty-->
+
+	<WeaponTemplate
+		id="ShatBounty1"
+		Name="ShatBounty1"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_ShatBounty1" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="ShatBounty2"
+		Name="ShatBounty2"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_ShatBounty2" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="ShatBounty3"
+		Name="ShatBounty3"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_ShatBounty3" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="ShatBounty4"
+		Name="ShatBounty4"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_ShatBounty4" />
+		</Nuggets>
+	</WeaponTemplate>
+
+
+	<WeaponTemplate
+		id="ShatBounty5"
+		Name="ShatBounty5"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_ShatBounty5" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="ShatBounty6"
+		Name="ShatBounty6"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_ShatBounty6" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="ShatBounty7"
+		Name="ShatBounty7"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_ShatBounty7" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="ShatBounty8"
+		Name="ShatBounty8"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_ShatBounty8" />
+		</Nuggets>
+	</WeaponTemplate>
+
+</AssetDeclaration>

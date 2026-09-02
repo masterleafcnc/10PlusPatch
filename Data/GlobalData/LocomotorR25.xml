@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="us-ascii" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<LocomotorTemplate
+		id="BasicHelicopterTaxiLocomotor"
+		Name="BasicHelicopterTaxiLocomotor"
+		Surfaces="GROUND" 
+		TurnTimeSeconds="1.0s" 
+		TurnTimeDamagedSeconds="1.5s" 
+		AccelerationSeconds="0.25s"
+		BrakingSeconds="0.25s"
+		MinTurnSpeed="0%" 
+		BehaviorZ="FLOATING_Z"	
+		Appearance="HOVER" 	
+		/>
+
+		
+		<LocomotorTemplate
+		id="GDIMCVLocomotorUnpacking"
+		Name="GDIMCVLocomotorUnpacking"
+		Surfaces="GROUND RUBBLE CRUSHABLE_OBSTACLE" 
+		TurnTimeSeconds="999999.0s" 
+		TurnTimeDamagedSeconds="999999.0s" 
+		MaxSpeedDamaged="75%"
+		AccelerationSeconds="0.1s"
+		SlowTurnRadius="0.0" 
+		FastTurnRadius="0.0" 
+		BehaviorZ="NO_MOTIVE_FORCE"	
+		Appearance="FOUR_WHEELS" 
+		ClampOrientationToPathTangent="false"
+		/>
+
+		<LocomotorTemplate
+		id="NodMCVLocomotorUnpacking"
+		Name="NodMCVLocomotorUnpacking"
+		Surfaces="GROUND RUBBLE CRUSHABLE_OBSTACLE" 
+		TurnTimeSeconds="999999.0s" 
+		TurnTimeDamagedSeconds="999999.0s" 
+		MaxSpeedDamaged="75%"
+		AccelerationSeconds="0.1s"
+		SlowTurnRadius="0.0" 
+		FastTurnRadius="0.0" 
+		BehaviorZ="NO_MOTIVE_FORCE"	
+		Appearance="TREADS" 
+		UseTerrainSmoothing="true"
+		AccelPitchLimit="2d"
+		PitchStiffness="0.5"
+		RollStiffness="0.5"
+		PitchDamping="0.8"
+		RollDamping="0.3"
+		ClampOrientationToPathTangent="false"
+		ForwardAccelerationPitchFactor="0.0"
+		LateralAccelerationRollFactor="0.0"
+		/>
+
+		<!-- needs to inherit the height properties of the ScrinMCVUNpacking -->
+		<LocomotorTemplate
+		id="ScrinMCVLocomotorUnpacking"
+		Name="AlienMCVUnpackingLocomotor"
+		Surfaces="GROUND"
+		MaxSpeedDamaged="50%"
+		TurnTimeSeconds="999999.0s" 
+		TurnTimeDamagedSeconds="999999.0s" 
+		BrakingSeconds="0.8s"
+		SlowTurnRadius="0.0"
+		FastTurnRadius="0.0"
+		BehaviorZ="SURFACE_RELATIVE_HEIGHT_ALLOW_ZERO_HEIGHT"
+		Appearance="TREADS"
+		UseTerrainSmoothing="true"
+		TakeOffAndLandingSpeed="6.0"
+		TakeOffAndLandingSlowDownDelta="25.0"
+		TakeOffAndLandingSlowDownTime=".5s"
+	/>
+
+		
+		
+</AssetDeclaration>

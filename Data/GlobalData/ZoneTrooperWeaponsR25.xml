@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGun"
+		Name="ZoneTrooperMachineGun"
+		AttackRange="325.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		FireSound="AudioEvent:ZoneTrooperGunFire"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="0.23s"
+				MaxSeconds="0.27s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="0"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="210.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="0.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<!-- BANNER CARRIER WEAPONS (DISABLE WHEN OUTSIDE OF HAMMERHEAD) -->
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGunFake"
+		Name="ZoneTrooperMachineGunFake"
+		AttackRange="325.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="99999s"
+				MaxSeconds="99999s" />
+
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL">
+			<DamageScalarDetails Scalar= "0%" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- fake weapon for scanner pack extra range -->
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGunFakeEnhanced"
+		Name="ZoneTrooperMachineGunFakeEnhanced"
+		AttackRange="360.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="99999s"
+				MaxSeconds="99999s" />
+
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL">
+			<DamageScalarDetails Scalar= "0%" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGun1"
+		Name="ZoneTrooperMachineGun1"
+		AttackRange="325.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		FireSound="AudioEvent:ZoneTrooperGunFire"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="0.23s"
+				MaxSeconds="0.27s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="0"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="210.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="0.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+	
+	<!-- extra weapons for zone troopers LaserIds -->
+	<WeaponTemplate
+		id="ZoneTrooperMachineGun2"
+		Name="ZoneTrooperMachineGun2"
+		AttackRange="325.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		FireSound="AudioEvent:ZoneTrooperGunFire"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"	
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="0.23s"
+				MaxSeconds="0.27s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="1"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="210.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="0.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGun3"
+		Name="ZoneTrooperMachineGun3"
+		AttackRange="325.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		FireSound="AudioEvent:ZoneTrooperGunFire"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="0.23s"
+				MaxSeconds="0.27s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="2"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="210.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="0.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGun4"
+		Name="ZoneTrooperMachineGun4"
+		AttackRange="325.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		FireSound="AudioEvent:ZoneTrooperGunFire"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="0.23s"
+				MaxSeconds="0.27s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="3"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="210.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="0.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<!-- scanner pack weapons (extra range)-->
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGun1Enhanced"
+		Name="ZoneTrooperMachineGun1Enhanced"
+		AttackRange="360.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		FireSound="AudioEvent:ZoneTrooperGunFire"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="0.23s"
+				MaxSeconds="0.27s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="0"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="210.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="0.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>	
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGun2Enhanced"
+		Name="ZoneTrooperMachineGun2Enhanced"
+		AttackRange="360.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		FireSound="AudioEvent:ZoneTrooperGunFire"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="0.23s"
+				MaxSeconds="0.27s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="1"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="210.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="0.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>	
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGun3Enhanced"
+		Name="ZoneTrooperMachineGun3Enhanced"
+		AttackRange="360.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		FireSound="AudioEvent:ZoneTrooperGunFire"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="0.23s"
+				MaxSeconds="0.27s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="2"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="210.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="0.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>	
+
+	<WeaponTemplate
+		id="ZoneTrooperMachineGun4Enhanced"
+		Name="ZoneTrooperMachineGun4Enhanced"
+		AttackRange="360.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		FireSound="AudioEvent:ZoneTrooperGunFire"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		>
+
+		<PreAttackDelay
+		  MinSeconds="0.0s"
+		  MaxSeconds="0.1s" />
+		<FiringDuration
+				MinSeconds="1.8s"
+				MaxSeconds="2.2s" />
+		<ClipReloadTime
+				MinSeconds="0.23s"
+				MaxSeconds="0.27s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="3"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="210.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="0.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+</AssetDeclaration>

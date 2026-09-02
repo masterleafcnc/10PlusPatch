@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<WeaponTemplate
+		id="TemporalWormholeWeaponTrigger"
+		Name="TemporalWormholeWeaponTrigger"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AttackRange="50000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="150.0"
+				ForbiddenTargetObjectStatus="IN_STASIS"
+				AttributeModifierName="AttributeModifier_TemporalWormhole">
+			</AttributeModifierNugget>
+			<TintObjectsNugget
+				Radius="150"
+				PreColorTime="0s"
+				SustainedColorTime="1.25s"
+				PostColorTime="0s"
+				Frequency=".3"
+				Amplitude="1">
+				<Color R="-0.0" G="-0.0" B="0.8"/>
+			</TintObjectsNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- increased rangefinder range for grenadier squad inside a hh -->
+
+	<WeaponTemplate
+		id="SquadGrenadeRangefinderEnhanced"
+		Name="SquadGrenadeRangefinderEnhanced"
+		AttackRange="220"
+		LeechRangeWeapon="true"
+		AcceptableAimDelta="45d"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		FinishAttackOnceStarted="false"
+ 		>
+		<FiringDuration
+				MinSeconds="1.0s"
+				MaxSeconds="1.0s" />
+	</WeaponTemplate>
+
+	<!-- increased ranged for grenadiers inside of hammerheads-->
+
+	<WeaponTemplate
+		id="GDIGrenadeSoldierGrenadeEnhanced"
+		Name="GDIGrenadeSoldierGrenadeEnhanced"
+		AttackRange="286"
+		WeaponSpeed="230"
+		MinWeaponSpeed="230"
+		MaxWeaponSpeed="250"
+		FireSound="AudioEvent:GDI_Grenadier_GrenadeThrow"
+		AcceptableAimDelta="20d"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+	>
+		<PreAttackDelay
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s" />
+		<FiringDuration
+			MinSeconds="0.70s"
+			MaxSeconds="0.70s" />
+		<ClipReloadTime
+			MinSeconds="0.1s"
+			MaxSeconds="0.4s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="GDIGrenadeSoldierGrenadeProjectile"
+				WarheadTemplate="GDIGrenadeSoldierGrenadeWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="GDIGrenadeSoldierGrenadeProjectile_Veteran" />
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="50.0"
+				Suppression="20"
+				DurationSeconds="7.5s" />
+		</Nuggets>
+		<ScatterRadiusVsType
+			Radius="20.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<!-- firehawk bomb fix -->
+
+	<WeaponTemplate
+		  id="FireHawkBombWarhead"
+		  Name="FireHawkBombWarhead"
+		  ProjectileCollidesWith  = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		  FireFX="FX_GDIBombHit"
+		  AntiMask="ANTI_GROUND ANTI_STRUCTURE">
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="100"
+				Damage="1500000"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DeathType="EXPLODED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageContainedNugget>
+
+			<DamageNugget
+				Damage="1500.0"
+				Radius="25.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DamageFXType="GDI_BOMB"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="1500.0"
+				Radius="25.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DamageFXType="GDI_BOMB"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+			
+			<MetaImpactNugget
+				ShockWaveAmount="90.0"
+				ShockWaveRadius="100.0"
+				ShockWaveZMult="1.50" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GDIFirehawkHardpointsUpgradeBombMainLoad"
+		Name="GDIFirehawkHardpointsUpgradeBombMainLoad"
+		ScatterRadius = "1.0"
+		HitPercentage="0%"
+		AttackRange="200.0"
+		WeaponSpeed="180"
+		WeaponRecoil="20d"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="3"
+		FireSound="AudioEvent:GDI_FireHawk_BombFire"
+		ProjectileCollidesWith  = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		DisableScatterForTargetsOnWall="true"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="20d"
+		AutoReloadsClip="RETURN_TO_BASE"
+		SingleAmmoReloadedNotFullSound="AudioEvent:GDI_FireHawk_AmmoLoadOne"
+		ClipReloadedSound="AudioEvent:GDI_FireHawk_AmmoReloaded"
+		ReAcquireDetailType="PRE_FIRE"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_03"
+ 		>
+		<FiringDuration
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s" />
+		<ClipReloadTime
+			MinSeconds="10s"
+			MaxSeconds="10s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="FireHawkBombWarhead"
+				ProjectileTemplate="GDIFirehawkBombProjectile">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="GDIFirehawkBombProjectile_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GDIFirehawkBombMainLoad"
+		Name="GDIFirehawkBombMainLoad"
+		ScatterRadius = "1.0"
+		HitPercentage="0%"
+		AttackRange="200.0"
+		WeaponSpeed="180"
+		WeaponRecoil="20d"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="2"
+		FireSound="AudioEvent:GDI_FireHawk_BombFire"
+		ProjectileCollidesWith  = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		DisableScatterForTargetsOnWall="true"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="20d"
+		AutoReloadsClip="RETURN_TO_BASE"
+		SingleAmmoReloadedNotFullSound="GDI_FireHawk_AmmoLoadOne"
+		ClipReloadedSound="GDI_FireHawk_AmmoReloaded"
+		ReAcquireDetailType="PRE_FIRE"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_02"
+ 		>
+		<FiringDuration
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s" />
+		<ClipReloadTime
+			MinSeconds="10s"
+			MaxSeconds="10s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="FireHawkBombWarhead"
+				ProjectileTemplate="GDIFirehawkBombProjectile">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="GDIFirehawkBombProjectile_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- for spawning the squad 
+
+	<WeaponTemplate
+		id="GenericGDIBuildingDestructionWeapon"
+		Name="GenericGDIBuildingDestructionWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_GenericGDIBuildingDestruction" />
+		</Nuggets>
+	</WeaponTemplate>-->
+
+	<WeaponTemplate
+		id="GenericGDIBuildingSuicideWeapon"
+		Name="GenericGDIBuildingSuicideWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_GenericGDIBuildingSuicide" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GenericZOCOMBuildingSuicideWeapon"
+		Name="GenericZOCOMBuildingSuicideWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_GenericZOCOMBuildingSuicide" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- deploy a destroyed shatterer -->
+
+	<WeaponTemplate
+		id="SpawnDestroyedSonicTank"
+		Name="SpawnDestroyedSonicTank"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_DestroyedSonicTank" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- deploy a destroyed shatterer, debris only -->
+
+	<WeaponTemplate
+		id="SpawnDestroyedSonicTankDebris"
+		Name="SpawnDestroyedSonicTankDebris"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_GDIShattererDebris" />
+		</Nuggets>
+	</WeaponTemplate>
+
+
+	<!-- deploy a destroyed zone shatterer -->
+
+	<WeaponTemplate
+		id="SpawnDestroyedImprovedSonicTank"
+		Name="SpawnDestroyedImprovedSonicTank"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_DestroyedImprovedSonicTank" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- deploy a destroyed zone shatterer, debris only -->
+
+	<WeaponTemplate
+		id="SpawnDestroyedImprovedSonicTankDebris"
+		Name="SpawnDestroyedImprovedSonicTankDebris"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_SteelTalonsSteelShattererDebris" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- deploy a destroyed sonic emitter -->
+
+	<WeaponTemplate
+		id="SpawnDestroyedSonicEmitter"
+		Name="SpawnDestroyedSonicEmitter"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_DestroyedSonicEmitter" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- supersonic airstrike fix-->
+
+	<WeaponTemplate
+		id="GDISupersonicAirWeapon"
+		Name="GDISupersonicAirWeapon"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AttackRange="200.0"
+		ClipSize="1"
+		FireFX="FX_GDI_SupersonicAirStrike_Explosion"
+		AutoReloadsClip="NONE"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		CanFireWhileMoving="true"
+ 		>
+		<ClipReloadTime
+				MinSeconds="0.3s"
+				MaxSeconds="0.3s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="2500.0"
+				Radius="200.0"
+				DamageTaperOff="75"
+				DamageType="ROCKET"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL"
+				CylinderAOE="true"
+				ForbiddenTargetModelCondition="LOCOMOTOR_TAXIING LANDING TAKING_OFF">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="AIRCRAFT">
+					<ExcludeThing>GDISuperSonicAirAttack</ExcludeThing>
+				</SpecialObjectFilter>
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						Rule="NONE"
+						Include="MOTHERSHIP" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+
+	<WeaponTemplate
+		id="GDIRifleSoldierRifleFake"
+		Name="GDIRifleSoldierRifleFake"
+		AttackRange="260.0"
+		WeaponSpeed="999999.0"
+		FireSoundPerClip=""
+		FireFX=""
+		FireVeteranFX=""
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="3"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+		>
+		<ClipReloadTime
+				MinSeconds="99999s"
+				MaxSeconds="99999s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="GDI_MACHINEGUN"
+				DeathType="NORMAL">
+			<DamageScalarDetails Scalar= "0%" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- phase field bug workaround-->
+
+	<WeaponTemplate
+		id="AlienPhaseFieldWeaponTrigger"
+		Name="AlienPhaseFieldWeaponTrigger"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<!-- FireSound="ALI_PhaseGenerator_Begin" no worky -->
+		<!-- FireFX="FX_ALI_PhaseGenerator_Begin" no worky -->
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="100.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS"
+				AttributeModifierName="AttributeModifier_AlienPhaseFieldMechas">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>Reaper17CustomizableVehicle</IncludeThing>
+					<IncludeThing>Traveler59CustomizableVehicle</IncludeThing>
+					<IncludeThing>AlienCustomizableVehicle</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+
+			<WeaponOCLNugget WeaponOCL="OCL_PhaseDummy" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlienPhaseFieldWeapon"
+		Name="AlienPhaseFieldWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0"
+		>
+		<!-- FireSound="ALI_PhaseGenerator_Begin" no worky -->
+		<!-- FireFX="FX_ALI_PhaseGenerator_Begin" no worky -->
+		<Nuggets>
+		<!-- spawn a dummy that fires a weapon on created 	-->
+
+		<LuaEventNugget
+			Radius="100.0"
+			PartitionFilterTestType="CIRCLE"
+			EventName="PhaseFieldEvent"
+			SendToAllies="true"
+		>
+			<SpecialObjectFilter
+					Relationship="ALLIES"
+					Rule="ANY"
+					ForbiddenTargetObjectStatus="IN_STASIS"
+					Exclude="AIRCRAFT INFANTRY"
+					Include="VEHICLE">
+					<!-- MCVs are phaseable, including the scrin family unpacking objects for
+					     the few seconds they are on the ground. keep in sync with the
+					     ObjectFilter of SpecialPower_PhaseField in SpecialPowerTemplates.xml -->
+					<IncludeThing>AlienMCV</IncludeThing>
+					<IncludeThing>AlienMCVUnpacking</IncludeThing>
+					<IncludeThing>Reaper17MCV</IncludeThing>
+					<IncludeThing>Reaper17MCVUnpacking</IncludeThing>
+					<IncludeThing>Traveler59MCV</IncludeThing>
+					<IncludeThing>Traveler59MCVUnpacking</IncludeThing>
+					<ExcludeThing>Viceroid</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>AlienMillipedeBody</ExcludeThing>
+					<ExcludeThing>AlienMillipedeHead</ExcludeThing>
+				</SpecialObjectFilter>
+		</LuaEventNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- rifle 10% damage buff vs disintegrators -->
+
+	<WeaponTemplate
+		id="GDIRifleSoldierRifle"
+		Name="GDIRifleSoldierRifle"
+		AttackRange="260.0"
+		WeaponSpeed="999999.0"
+		FireSoundPerClip="AudioEvent:GDI_RifleSoldier_gunFire_v5"
+		FireFX="FX_GDIRifleManFire"
+		FireVeteranFX="FX_GDIRifleManFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="3"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+		>
+		<ClipReloadTime
+			MinSeconds="0.3s"
+			MaxSeconds="0.4s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="3.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="GDI_MACHINEGUN"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "110%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>AlienRazorDrones</IncludeThing>
+						<IncludeThing>Traveler59RazorDrone</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>	
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="5.0"
+				Suppression="5"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- rage generator LuaEventNugget change -->
+	<WeaponTemplate
+		id="NODWarmechRageGeneratorTrigger"
+		Name="NODWarmechRageGeneratorTrigger"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		FireFX="FX_NODRedeemerRageGenerator">
+		<Nuggets>
+			<DamageNugget
+				Damage="0"
+				Radius="500.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_HALLUCINE"
+				DeathType="EXPLODED" >
+			</DamageNugget>
+
+		<AttributeModifierNugget
+			PartitionFilterTestType="SPHERE"
+			AttributeModifierName="AttributeModifier_Hallucinate"
+			Radius="500" >
+			<SpecialObjectFilter
+				Rule="NONE"
+				Include="INFANTRY">
+				<!-- we handle mechas with the normal way -->
+				<IncludeThing>Reaper17CustomizableVehicle</IncludeThing>
+				<IncludeThing>Traveler59CustomizableVehicle</IncludeThing>
+				<IncludeThing>AlienCustomizableVehicle</IncludeThing>
+			</SpecialObjectFilter>
+		</AttributeModifierNugget>
+
+		<WeaponOCLNugget WeaponOCL="OCL_RageDummy" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODWarmechRageGenerator"
+		Name="NODWarmechRageGenerator"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		>
+		<Nuggets>
+		<!-- spawn a dummy that fires a weapon on created 	-->
+
+			<LuaEventNugget
+				Radius="500.0"
+				PartitionFilterTestType="SPHERE"
+				EventName="RageGeneratorEvent"
+				SendToEnemies="true"
+			>
+				<SpecialObjectFilter
+						Rule="ANY"
+						Include="VEHICLE"
+						Exclude="AIRCRAFT INFANTRY HORDE">
+				<!-- we handle mechas with the normal way -->
+				<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+				<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>
+				<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+				<ExcludeThing>AlienMillipedeBody</ExcludeThing>
+				<ExcludeThing>AlienMillipedeHead</ExcludeThing>
+				</SpecialObjectFilter>
+			</LuaEventNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- hammerhead garrison fake weapons (missile squad / grenadier squad) -->
+
+	<WeaponTemplate
+		id="GDIMissileSoldierMissileLauncherFake"
+		Name="GDIMissileSoldierMissileLauncherFake"
+		AttackRange="350.0"
+		WeaponSpeed="999999.0"
+		FireSound=""
+		FireFX=""
+		FireVeteranFX=""
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
+		AcceptableAimDelta="20d"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PRE_FIRE"
+		ClipSize="1"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		CanFireWhileMoving="false"
+		>
+		<PreAttackDelay
+			MinSeconds=".2s"
+			MaxSeconds=".2s" />
+		<FiringDuration
+			MinSeconds="2.8s"
+			MaxSeconds="3.0s" />
+		<ClipReloadTime
+				MinSeconds="99999s"
+				MaxSeconds="99999s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="ROCKET"
+				DamageFXType="GDI_MISSILE"
+				DeathType="NORMAL">
+			<DamageScalarDetails Scalar= "0%" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GDIGrenadeSoldierGrenadeFake"
+		Name="GDIGrenadeSoldierGrenadeFake"
+		AttackRange="260.0"
+		WeaponSpeed="999999.0"
+		FireSound=""
+		AcceptableAimDelta="20d"
+		PreAttackType="PER_SHOT"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		>
+		<PreAttackDelay
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s" />
+		<FiringDuration
+			MinSeconds="0.70s"
+			MaxSeconds="0.70s" />
+		<ClipReloadTime
+				MinSeconds="99999s"
+				MaxSeconds="99999s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DamageFXType="GDI_GRENADE"
+				DeathType="NORMAL">
+			<DamageScalarDetails Scalar= "0%" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="MutantMarauderRifleFake"
+		Name="MutantMarauderRifleFake"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireSoundPerClip=""
+		FireFX=""
+		FireVeteranFX=""
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="3"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+		>
+		<ClipReloadTime
+				MinSeconds="99999s"
+				MaxSeconds="99999s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="GDI_MACHINEGUN"
+				DeathType="NORMAL">
+			<DamageScalarDetails Scalar= "0%" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+</AssetDeclaration>

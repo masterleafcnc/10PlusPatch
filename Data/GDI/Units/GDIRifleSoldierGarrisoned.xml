@@ -1,0 +1,1369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<GameObject
+		id="GDIRifleSoldierGarrisoned"
+		inheritFrom="BaseInfantry"
+		SelectPortrait="Portrait_GDIRiflemanSquad"
+		ButtonImage="Portrait_GDIRiflemanSquad"
+		Side="GDI"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="0"
+		BuildTime="0.5"
+		CommandSet="EmptyCommandSet"
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY PATH_THROUGH_INFANTRY LINE_OF_SIGHT_IGNORES_BUILDINGS NOT_AUTOACQUIRABLE UNATTACKABLE"
+		RadarPriority="UNIT"
+		ThreatLevel="10"
+		ProductionQueueType="INFANTRY"
+		UnitCategory="INFANTRY"
+		WeaponCategory="GUN"
+		VoicePriority="104"
+		EditorName="GDIRifleSoldier"
+		Description="Desc:GDIRiflemanSquad"
+		WorldMapArmoryUpgradesAllowed="Upgrade_GDICompositeArmor Upgrade_GDIAPAmmo"
+		TypeDescription="Type:GDIRiflemanSquad">
+		<DisplayName>Name:GDIRiflemanSquad</DisplayName>
+		<DisplayUpgrade id="ModuleTag_DisplayCompositeArmorUpgrade">Upgrade_GDICompositeArmor</DisplayUpgrade>
+		<DisplayUpgrade>Upgrade_GDIAPAmmo</DisplayUpgrade>
+		<ArmorSet
+			Armor="GDIRifleSoldierArmor"
+			DamageFX="InfantryDamageFX" />
+		<ArmorSet
+        id="GDIUpgradeArmor" 
+			Conditions="PLAYER_UPGRADE"
+			Armor="GDIRifleSoldierArmorComposite"
+			DamageFX="NormalDamageFX" />
+		<LocomotorSet
+			Locomotor="HumanLocomotor"
+			Condition="NORMAL"
+			Speed="62" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				InitialRecoilSpeed="0.1"
+				MaxRecoilDistance="0.1"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="3.0"
+				ExtraPublicBone="MUZZLEFLASH">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:FXINVISBONE" />
+
+					<!-- weapon 1-->
+					
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="1"
+						BoneName="INVISBONE01" />
+					<WeaponRecoilBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="1"
+						BoneName="INVISBONE01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="1"
+						BoneName="INVISBONE01" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="1"
+						BoneName="INVISBONE01" />
+					<Turret TurretNameKey="INVISBONE01" TurretID="1" />
+
+
+					<!-- weapon 2-->
+
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="2"
+						BoneName="INVISBONE01" />
+					<WeaponRecoilBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="2"
+						BoneName="INVISBONE01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="2"
+						BoneName="INVISBONE01" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="2"
+						BoneName="INVISBONE01" />
+					<Turret TurretNameKey="INVISBONE01" TurretID="2" />
+
+					<!-- weapon 3 -->
+
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="3"
+						BoneName="INVISBONE01" />
+					<WeaponRecoilBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="3"
+						BoneName="INVISBONE01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="3"
+						BoneName="INVISBONE01" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="3"
+						BoneName="INVISBONE01" />
+					<Turret TurretNameKey="INVISBONE01" TurretID="3" />
+						
+					<!-- weapon 4 -->
+
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="4"
+						BoneName="INVISBONE01" />
+					<WeaponRecoilBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="4"
+						BoneName="INVISBONE01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="4"
+						BoneName="INVISBONE01" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="4"
+						BoneName="INVISBONE01" />
+					<Turret TurretNameKey="INVISBONE01" TurretID="4" />
+
+					<!-- weapon 5 -->
+
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="5"
+						BoneName="INVISBONE01" />
+					<WeaponRecoilBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="5"
+						BoneName="INVISBONE01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="5"
+						BoneName="INVISBONE01" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="5"
+						BoneName="INVISBONE01" />
+					<Turret TurretNameKey="INVISBONE01" TurretID="5" />
+
+					<!-- weapon 6 -->
+
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="6"
+						BoneName="INVISBONE01" />
+					<WeaponRecoilBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="6"
+						BoneName="INVISBONE01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="6"
+						BoneName="INVISBONE01" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						WeaponSlotID="6"
+						BoneName="INVISBONE01" />
+					<Turret TurretNameKey="INVISBONE01" TurretID="6" />
+
+				</ModelConditionState>
+		
+			</ScriptedModelDraw>
+		
+			<!-- insane, but has to be done this way -->
+
+			<!-- 1 -->
+
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDraw1"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.2"
+				MaxTracersPerFrame="0.3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				WeaponSlotID="1"
+				TracerHitFx="FX_BulletHitGDI">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawVeterancy1"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.5"
+				MaxTracersPerFrame="0.5"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="1"
+				TracerHitFx="FX_BulletHitGDIHeroic">
+				<HeadColor
+					r="1.0"
+					g="0.0"
+					b="0.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAP1"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".2"
+				MaxTracersPerFrame=".2"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				WeaponSlotID="1"
+				TracerHitFx="FX_BulletHitGDIAP">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01" 
+					ForbiddenStatus="WEAPON_UPGRADED_03"/>
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAPVeterancy1"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".3"
+				MaxTracersPerFrame=".3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="1"
+				TracerHitFx="FX_BulletHitGDIAPHeroic">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02"/>
+			</TracerModelDraw>	
+			
+			<!-- 2 -->
+
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDraw2"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.2"
+				MaxTracersPerFrame="0.3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				WeaponSlotID="2"
+				TracerHitFx="FX_BulletHitGDI">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawVeterancy2"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.5"
+				MaxTracersPerFrame="0.5"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="2"
+				TracerHitFx="FX_BulletHitGDIHeroic">
+				<HeadColor
+					r="1.0"
+					g="0.0"
+					b="0.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAP2"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".2"
+				MaxTracersPerFrame=".2"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				WeaponSlotID="2"
+				TracerHitFx="FX_BulletHitGDIAP">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01" 
+					ForbiddenStatus="WEAPON_UPGRADED_03"/>
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAPVeterancy2"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".3"
+				MaxTracersPerFrame=".3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="2"
+				TracerHitFx="FX_BulletHitGDIAPHeroic">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02"/>
+			</TracerModelDraw>	
+
+			<!-- 3 -->
+
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDraw3"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.2"
+				MaxTracersPerFrame="0.3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				WeaponSlotID="3"
+				TracerHitFx="FX_BulletHitGDI">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawVeterancy3"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.5"
+				MaxTracersPerFrame="0.5"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="3"
+				TracerHitFx="FX_BulletHitGDIHeroic">
+				<HeadColor
+					r="1.0"
+					g="0.0"
+					b="0.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAP3"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".2"
+				MaxTracersPerFrame=".2"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				WeaponSlotID="3"
+				TracerHitFx="FX_BulletHitGDIAP">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01" 
+					ForbiddenStatus="WEAPON_UPGRADED_03"/>
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAPVeterancy3"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".3"
+				MaxTracersPerFrame=".3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="3"
+				TracerHitFx="FX_BulletHitGDIAPHeroic">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02"/>
+			</TracerModelDraw>	
+
+			<!-- 4 -->
+
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDraw4"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.2"
+				MaxTracersPerFrame="0.3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				WeaponSlotID="4"
+				TracerHitFx="FX_BulletHitGDI">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawVeterancy4"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.5"
+				MaxTracersPerFrame="0.5"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="4"
+				TracerHitFx="FX_BulletHitGDIHeroic">
+				<HeadColor
+					r="1.0"
+					g="0.0"
+					b="0.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAP4"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".2"
+				MaxTracersPerFrame=".2"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				WeaponSlotID="4"
+				TracerHitFx="FX_BulletHitGDIAP">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01" 
+					ForbiddenStatus="WEAPON_UPGRADED_03"/>
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAPVeterancy4"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".3"
+				MaxTracersPerFrame=".3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="4"
+				TracerHitFx="FX_BulletHitGDIAPHeroic">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02"/>
+			</TracerModelDraw>	
+
+			<!-- 5 -->
+
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDraw5"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.2"
+				MaxTracersPerFrame="0.3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				WeaponSlotID="5"
+				TracerHitFx="FX_BulletHitGDI">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawVeterancy5"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.5"
+				MaxTracersPerFrame="0.5"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="5"
+				TracerHitFx="FX_BulletHitGDIHeroic">
+				<HeadColor
+					r="1.0"
+					g="0.0"
+					b="0.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAP5"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".2"
+				MaxTracersPerFrame=".2"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				WeaponSlotID="5"
+				TracerHitFx="FX_BulletHitGDIAP">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01" 
+					ForbiddenStatus="WEAPON_UPGRADED_03"/>
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAPVeterancy5"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".3"
+				MaxTracersPerFrame=".3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="5"
+				TracerHitFx="FX_BulletHitGDIAPHeroic">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02"/>
+			</TracerModelDraw>	
+
+			<!-- 6 -->
+
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDraw6"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.2"
+				MaxTracersPerFrame="0.3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				WeaponSlotID="6"
+				TracerHitFx="FX_BulletHitGDI">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawVeterancy6"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.5"
+				MaxTracersPerFrame="0.5"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="6"
+				TracerHitFx="FX_BulletHitGDIHeroic">
+				<HeadColor
+					r="1.0"
+					g="0.0"
+					b="0.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAP6"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".2"
+				MaxTracersPerFrame=".2"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				WeaponSlotID="6"
+				TracerHitFx="FX_BulletHitGDIAP">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01" 
+					ForbiddenStatus="WEAPON_UPGRADED_03"/>
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawAPVeterancy6"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame=".3"
+				MaxTracersPerFrame=".3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				WeaponSlotID="6"
+				TracerHitFx="FX_BulletHitGDIAPHeroic">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02"/>
+			</TracerModelDraw>	
+			
+		</Draws>
+		<Behaviors>
+		<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<CrushDie
+				id="ModuleTAg_CrushDie">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+			</CrushDie>
+			<FXListBehavior
+				id="SquishedFXPlayer">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+				<Event
+					Index="onDeath"
+					FX="FX_InfantrySquished" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="10"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+
+			<!-- xp upgrades -->
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifier200xp"
+				AttributeModifier="Modifier_Grant200percentXp">
+				<TriggeredBy>Upgrade_200scaler</TriggeredBy>
+			</AttributeModifierUpgrade>
+
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifier300xp"
+				AttributeModifier="Modifier_Grant300percentXp">
+				<TriggeredBy>Upgrade_300scaler</TriggeredBy>
+			</AttributeModifierUpgrade>
+
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+      <TemporarilyDefectUpdate
+        id="ModuleTag_TemporarilyDefect"
+        DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<!-- squad member 1 -->
+				<WeaponSlotTurret 
+					ID="1"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleFake"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifle"
+						Upgrade="Upgrade_SquadMember1"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<!-- ap ammo-->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleAPAmmo"
+						Upgrade="Upgrade_SquadMemberEnhanced1"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+
+				<!-- squad member 2 -->
+				<WeaponSlotTurret 
+					ID="2"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleFake"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifle"
+						Upgrade="Upgrade_SquadMember2"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<!-- ap ammo-->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleAPAmmo"
+						Upgrade="Upgrade_SquadMemberEnhanced2"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+
+				<!-- squad member 3 -->
+				<WeaponSlotTurret 
+					ID="3"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleFake"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifle"
+						Upgrade="Upgrade_SquadMember3"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<!-- ap ammo-->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleAPAmmo"
+						Upgrade="Upgrade_SquadMemberEnhanced3"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+
+
+				<!-- squad member 4 -->
+				<WeaponSlotTurret 
+					ID="4"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleFake"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifle"
+						Upgrade="Upgrade_SquadMember4"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<!-- ap ammo-->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleAPAmmo"
+						Upgrade="Upgrade_SquadMemberEnhanced4"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+
+				<!-- squad member 5 -->
+				<WeaponSlotTurret 
+					ID="5"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleFake"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifle"
+						Upgrade="Upgrade_SquadMember5"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<!-- ap ammo-->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleAPAmmo"
+						Upgrade="Upgrade_SquadMemberEnhanced5"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+
+				<!-- squad member 6 -->
+				<WeaponSlotTurret 
+					ID="6"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleFake"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifle"
+						Upgrade="Upgrade_SquadMember6"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<!-- ap ammo-->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIRifleSoldierRifleAPAmmo"
+						Upgrade="Upgrade_SquadMemberEnhanced6"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+
+			</WeaponSetUpdate>
+
+			<Physics
+				id="ModuleTag_Physics" />			
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3s"
+				SinkRate="2.4"
+				DestructionDelay="4s">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Sound
+					Type="INITIAL"
+					List="" />
+			</SlowDeath>
+			<SuppressionUpdate
+				id="ModuleTag_SuppressionUpdate"
+				UpdateDelay="1s"
+				Suppressability="500"
+				SuppressionDuration="5s"
+				AttributeModifierSuppressed="Modifier_Test_Suppression"
+				AttributeModifierForceMove="Modifier_Test_Suppression_ForceMove" />
+			<ModelConditionUpgrade xmlns="uri:ea.com:eala:asset"
+											 id="ModuleTag_ArmorCompositeModelCondition"
+											 Permanent="true"
+											 AddConditionFlags="UPGRADED_ARMOR"
+	>
+	<TriggeredBy>Upgrade_GDICompositeArmor</TriggeredBy>
+</ModelConditionUpgrade>
+			<ArmorUpgrade xmlns="uri:ea.com:eala:asset"
+							id="ModuleTag_CompositeArmorUpgrade"
+							Permanent="true"
+							ArmorSetFlag="PLAYER_UPGRADE"
+	>
+	<TriggeredBy>Upgrade_GDICompositeArmor</TriggeredBy>
+</ArmorUpgrade>
+			<CreateAndEnterObjectSpecialPower xmlns="uri:ea.com:eala:asset"
+	id="ModuleTag_CallForTransport"
+	SpecialPowerTemplate="SpecialPowerCallForTransportGDI"
+	OCL="OCL_GDICallForTransport"
+	CreateLocation="CREATE_ABOVE_LOCATION"
+	TriggerFX="FX_GDICallForTransportFlare"
+	ChildModuleHandlesFX="true"
+	IdleWhenStartingPower="true">
+	<FXOffset x="25" y="0" z="0"></FXOffset>
+</CreateAndEnterObjectSpecialPower>
+	
+			<FindCoverBehavior
+				id="ModuleTag_FCB"
+				CoverScanRange="10.0"
+				AttributeModifierInCover="Modifier_Cover" />
+			<LargeGroupAudioUpdate
+				id="LGAU">
+				<Key>GDI_RifleSoldier</Key>
+			</LargeGroupAudioUpdate>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_UpgradeWeapon"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_GDIAPAmmo</TriggeredBy>
+			</StatusBitsUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_UpgradeAPAmmo"
+				AddConditionFlags="USER_1">
+				<TriggeredBy>Upgrade_GDIAPAmmo</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_GDINoVeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_SteelTalonsNoVeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_ZOCOMNoVeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_VeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_03"
+				StatusToClear="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+			<AudioLoopUpgrade id="GDI_CommandPost_APammoUpgrade" SoundToPlay="AudioEvent:GDI_CommandPost_APammoUpgrade">
+				<TriggeredBy>Upgrade_GDIAPAmmo</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade id="Generic_Infantry_Upgrade" SoundToPlay="AudioEvent:Generic_Infantry_Upgrade"> 
+				<TriggeredBy>Upgrade_GDICompositeArmor</TriggeredBy> 
+			</AudioLoopUpgrade> 
+
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+	AILuaEventsList="BannerCarrierFunctions_R24">
+				<UnitAITargetChooserData
+					SympathyRange="400.0" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="13.0"
+				ContactPointGeneration="SQUAD_MEMBER"/>
+		</Geometry>
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400"
+			MaxVisionBonusPercent="300"
+			VisionBonusTestRadius="200"
+			VisionBonusPercentPerFoot="1" />
+		<CrusherInfo
+			CrushableLevel="0" />
+	</GameObject>
+</AssetDeclaration>

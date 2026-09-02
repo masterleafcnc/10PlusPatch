@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GUMARV_SKN3" Hierarchy="GUMARV_SKL3">
+		<SubObject SubObjectID="ST_LASERRR" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_LASERRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ST_LASERRF" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_LASERRF</Mesh>
+			</RenderObject>
+		</SubObject>
+
+		<SubObject SubObjectID="ST_LASERLR" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_LASERLR</Mesh>
+			</RenderObject>
+		</SubObject>
+						
+		<SubObject SubObjectID="ST_LASERLF" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_LASERLF</Mesh>
+			</RenderObject>
+		</SubObject>
+
+		<SubObject SubObjectID="MARV_TREADSMOVE" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MARV_TREADSMOVE</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MARV_TREADSSTOP" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MARV_TREADSSTOP</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MARV_TREADSRIGHT" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MARV_TREADSRIGHT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MARV_TREADSLEFT" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MARV_TREADSLEFT</Mesh>
+			</RenderObject>
+		</SubObject>
+
+		<SubObject SubObjectID="OBBOX05" BoneIndex="86">
+			<RenderObject>
+				<CollisionBox>GUMARV_SKN2.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FXGLOW_BOTTOM02" BoneIndex="173">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.FXGLOW_BOTTOM02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX" BoneIndex="163">
+			<RenderObject>
+				<CollisionBox>GUMARV_SKN2.OBBOX</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FXGLOWS05" BoneIndex="170">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.FXGLOWS05</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="124">
+			<RenderObject>
+				<CollisionBox>GUMARV_SKN2.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ZT_BASE_TREADRR" BoneIndex="160">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ZT_BASE_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ZT_TURRETRR" BoneIndex="158">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ZT_TURRETRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ST_BASE_TREADRR" BoneIndex="155">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_BASE_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ST_TURRET_TREADRR" BoneIndex="153">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_TURRET_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RM_BASE_TREADRR" BoneIndex="150">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.RM_BASE_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RM_TURRET_TREADRR" BoneIndex="147">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.RM_TURRET_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MS_BASE_TREADRR" BoneIndex="144">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MS_BASE_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MS_TURRET_TREADRR" BoneIndex="141">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MS_TURRET_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GN_BASE_TREADRR" BoneIndex="138">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.GN_BASE_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GN_TURRET_TREADRR" BoneIndex="134">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.GN_TURRET_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="EN_BASE_TREADRR" BoneIndex="131">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.EN_BASE_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="EN_TURRET_TREADRR" BoneIndex="130">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.EN_TURRET_TREADRR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FXGLOWS04" BoneIndex="126">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.FXGLOWS04</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="87">
+			<RenderObject>
+				<CollisionBox>GUMARV_SKN2.OBBOX07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ZT_BASE_TREADLR" BoneIndex="123">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ZT_BASE_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ZT_TURRET_TREADLR" BoneIndex="121">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ZT_TURRET_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ST_BASE_TREADLR" BoneIndex="118">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_BASE_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ST_TURRET_TREADLR" BoneIndex="116">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_TURRET_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RM_BASE_TREADLR" BoneIndex="113">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.RM_BASE_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RM_TURRET_TREADLR" BoneIndex="110">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.RM_TURRET_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MS_BASE_TREADLR" BoneIndex="107">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MS_BASE_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MS_TURRET_TREADLR" BoneIndex="104">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MS_TURRET_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GN_BASE_TREADLR" BoneIndex="101">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.GN_BASE_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GN_TURRET_TREADLR" BoneIndex="97">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.GN_TURRET_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="EN_BASE_TREADLR" BoneIndex="94">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.EN_BASE_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="EN_TURRET_TREADLR" BoneIndex="93">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.EN_TURRET_TREADLR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FXGLOWS03" BoneIndex="89">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.FXGLOWS03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="5">
+			<RenderObject>
+				<CollisionBox>GUMARV_SKN2.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FXGLOW_BOTTOM01" BoneIndex="82">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.FXGLOW_BOTTOM01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="HEADLIGHTS" BoneIndex="5">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.HEADLIGHTS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FXGLOWS06" BoneIndex="81">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.FXGLOWS06</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="45">
+			<RenderObject>
+				<CollisionBox>GUMARV_SKN2.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MS_BASE_TREADRF" BoneIndex="80">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MS_BASE_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MS_TURRET_TREADRF" BoneIndex="77">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MS_TURRET_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ST_BASE_TREADRF" BoneIndex="74">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_BASE_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ST_TURRET_TREADRF" BoneIndex="72">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_TURRET_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ZT_BASE_TREADRF" BoneIndex="69">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ZT_BASE_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ZT_TURRET_TREADRF" BoneIndex="67">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ZT_TURRET_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RM_BASE_TREADRF" BoneIndex="64">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.RM_BASE_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RM_TURRET_TREADRF" BoneIndex="61">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.RM_TURRET_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GN_BASE_TREADRF" BoneIndex="58">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.GN_BASE_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GN_TURRET_TREADRF" BoneIndex="54">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.GN_TURRET_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="EN_BASE_TREADRF" BoneIndex="51">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.EN_BASE_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="EN_TURRET_TREADRF" BoneIndex="50">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.EN_TURRET_TREADRF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="6">
+			<RenderObject>
+				<CollisionBox>GUMARV_SKN2.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MS_BASE_TREADLF" BoneIndex="41">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MS_BASE_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MS_TURRET_TREADLF" BoneIndex="38">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MS_TURRET_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ST_BASE_TREADLF" BoneIndex="35">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_BASE_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ST_TURRET_TREADLF" BoneIndex="33">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ST_TURRET_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ZT_BASE_TREADLF" BoneIndex="30">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ZT_BASE_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ZT_TURRET_TREADLF" BoneIndex="28">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.ZT_TURRET_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RM_BASE_TREADLF" BoneIndex="25">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.RM_BASE_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RM_TURRET_TREADLF" BoneIndex="22">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.RM_TURRET_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GN_BASE_TREADLF" BoneIndex="19">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.GN_BASE_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GN_TURRET_TREADLF" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.GN_TURRET_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="EN_BASE_TREADLF" BoneIndex="12">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.EN_BASE_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="EN_TURRET_TREADLF" BoneIndex="11">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.EN_TURRET_TREADLF</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FXGLOWS01" BoneIndex="7">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.FXGLOWS01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MARV_MAP2" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MARV_MAP2</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MARV_MAP1" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MARV_MAP1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MARV_TREADSBACK" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MARV_TREADSBACK</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASHLF_01" BoneIndex="24">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MUZZLEFLASHLF_01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASHLF_02" BoneIndex="23">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MUZZLEFLASHLF_02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASHRF_01" BoneIndex="63">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MUZZLEFLASHRF_01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASHRF_02" BoneIndex="62">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MUZZLEFLASHRF_02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASHLR_01" BoneIndex="112">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MUZZLEFLASHLR_01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASHLR_02" BoneIndex="111">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MUZZLEFLASHLR_02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASHRR_01" BoneIndex="149">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MUZZLEFLASHRR_01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASHRR_02" BoneIndex="148">
+			<RenderObject>
+				<Mesh>GUMARV_SKN2.MUZZLEFLASHRR_02</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

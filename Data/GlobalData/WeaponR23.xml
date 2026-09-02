@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	
+	<WeaponTemplate
+		id="CrystalShieldBuildWeapon"
+		Name="CrystalShieldBuildWeapon"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_AlienCrystalShieldDummy" />
+		</Nuggets>
+	</WeaponTemplate>
+
+
+	<WeaponTemplate
+		id="TiberiumHiveWeapon"
+		Name="TiberiumHiveWeapon"
+		RadiusDamageAffects="ENEMIES NEUTRALS NOT_SIMILAR"
+		>
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="2.5s"
+		/>
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="10.0"
+				Radius="20.0"
+				UnderAttackOverrideEvaEvent="DamagedByTiberium"
+				DamageType="UNRESISTABLE"
+				DamageFXType="ALIEN_CANNON"
+				DeathType="BURNED">
+				<!--		<SpecialObjectFilter
+					Rule="ANY"
+					Include="INFANTRY" >
+					<ExcludeThing>AlienBuzzers</ExcludeThing>
+					<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+					<ExcludeThing>AlienAssimilator</ExcludeThing>
+					<ExcludeThing>AlienMastermind</ExcludeThing>
+					<ExcludeThing>AlienBlinkMastermind</ExcludeThing>
+					<ExcludeThing>AlienRazorDrones</ExcludeThing>
+					<ExcludeThing>AlienRazorDroneSquad</ExcludeThing>
+					<ExcludeThing>AlienShockTrooper</ExcludeThing>
+					<ExcludeThing>AlienShockTrooperSquad</ExcludeThing>
+					<ExcludeThing>AlienShockTrooperSquad_Veteran</ExcludeThing>
+					<ExcludeThing>AlienStalker</ExcludeThing>
+					<ExcludeThing>AlienStalkerSquad</ExcludeThing>
+					<ExcludeThing>MutantMarauder</ExcludeThing>
+					<ExcludeThing>MutantMarauderSquad</ExcludeThing>
+					<ExcludeThing>Viceroid</ExcludeThing>
+					<ExcludeThing>GDIZoneTrooper</ExcludeThing>
+					<ExcludeThing>GDIZoneTrooperSquad</ExcludeThing>
+				</SpecialObjectFilter>
+		-->
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- modifier vs other scorps applied -->
+
+	<WeaponTemplate
+		id="NODRaiderTankCannonLaser"
+		Name="NODRaiderTankCannonLaser"
+		AttackRange="275.0"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="POST_FIRE"
+		ClipSize="1"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		FireSound="Multisound:NOD_ScorpionTank_BeamWeaponLoopMS"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_01"
+		FireFX="FX_NODSpitfireFire"
+		FireVeteranFX="FX_NODSpitfireFireHeroic"
+ 		>
+		<!--
+		FiringLoopSound="NOD_ScorpionTank_BeamWeaponLoopMS"
+		FiringLoopSoundContinuesDuringReload="false"
+-->
+		<PreAttackDelay
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<FiringDuration
+			MinSeconds="2.36s"
+			MaxSeconds="2.36s" />
+		<ClipReloadTime
+			MinSeconds="0.95s"
+			MaxSeconds="1.0s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="520.0"
+				DelayTimeSeconds="0.05s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL">
+
+				<DamageScalarDetails Scalar= "50%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+
+				<DamageScalarDetails Scalar= "90%">
+					<Filter Rule="NONE">
+						<IncludeThing>NODRaiderTank</IncludeThing>
+						<IncludeThing>MarkedOfKaneRaiderTank</IncludeThing>
+						<IncludeThing>BlackHandRaiderTank</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="40"
+				DurationSeconds="5s" />
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="1"
+				HitGroundFX="FX_NODSpitfireHit"/>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!--
+	<WeaponTemplate
+		id="PreventCrystalDeath"
+		Name="PreventCrystalDeath"
+		RequiredFiringObjectStatus=""
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS NOT_SIMILAR">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="25.0"
+				PartitionFilterTestType="CIRCLE"
+				RequiredObjectStatus=""
+				AttributeModifierName="AttributeModifier_PreventCrystalDeath">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship=""
+					Alignment="NONE"
+					Include="TIBERIUM"
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="">
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate>
+-->
+
+	<!-- Engineer crash workaround weapons 
+
+	<WeaponTemplate
+		id="DelayHuskHide"
+		Name="DelayHuskHide"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS SELF">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="5.0"
+				PartitionFilterTestType="CIRCLE"
+				AttributeModifierName="AttributeModifier_HuskHide">
+				<SpecialObjectFilter
+					Rule="NONE"
+					StatusBitFlags="RIDER1"
+					RejectModelCondition="USER_3"
+					Alignment="NONE">
+					<IncludeThing>GDIJuggernaughtHusk</IncludeThing>
+					<IncludeThing>SteelTalonsBehemothHusk</IncludeThing>
+					<IncludeThing>NODAvatarHusk</IncludeThing>
+					<IncludeThing>BlackHandCustomWarmechHusk</IncludeThing>
+					<IncludeThing>MarkedOfKaneAvatarHusk</IncludeThing>
+					<IncludeThing>AlienAnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>Reaper17AnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>Traveler59AnnihilatorTripodHusk</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate> 
+
+	<WeaponTemplate
+		id="DelayHuskDeletion"
+		Name="DelayHuskDeletion"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS SELF">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="5.0"
+				PartitionFilterTestType="CIRCLE"
+				AttributeModifierName="AttributeModifier_HuskTimer">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship=""
+					StatusBitFlags="RIDER1"
+					RejectModelCondition=""
+					Alignment="NONE">
+					<IncludeThing>GDIJuggernaughtHusk</IncludeThing>
+					<IncludeThing>SteelTalonsBehemothHusk</IncludeThing>
+					<IncludeThing>NODAvatarHusk</IncludeThing>
+					<IncludeThing>BlackHandCustomWarmechHusk</IncludeThing>
+					<IncludeThing>MarkedOfKaneAvatarHusk</IncludeThing>
+					<IncludeThing>AlienAnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>Reaper17AnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>Traveler59AnnihilatorTripodHusk</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate>   -->
+
+	<!-- a workaround to send an alert to the player if an enemy has captured the husk -->
+	<WeaponTemplate
+		id="AlertHuskPlayer1"
+		Name="AlertHuskPlayer1"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect1" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer2"
+		Name="AlertHuskPlayer2"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect2" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer3"
+		Name="AlertHuskPlayer3"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect3" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer4"
+		Name="AlertHuskPlayer4"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect4" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer5"
+		Name="AlertHuskPlayer5"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect5" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer6"
+		Name="AlertHuskPlayer6"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect6" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer7"
+		Name="AlertHuskPlayer7"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect7" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer8"
+		Name="AlertHuskPlayer8"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect8" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- shard photon cannon buff vs infantry -->
+
+	<WeaponTemplate
+		id="AlienPhotonCannonShardLauncherWarhead"
+		Name="AlienPhotonCannonShardLauncherWarhead"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS">
+		<Nuggets>
+			<DamageNugget
+				Damage="140.0"
+				Radius="5.0"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_TIBSHARD">
+				<DamageScalarDetails Scalar="200%">
+					<Filter
+						Rule="NONE"
+						Include="CIVILIAN_BUILDING" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar="75%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- laser scorp damage nerf vs scorps
+
+	<WeaponTemplate
+		id="NODRaiderTankCannonLaser"
+		Name="NODRaiderTankCannonLaser"
+		AttackRange="275.0"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="POST_FIRE"
+		ClipSize="1"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		FireSound="Multisound:NOD_ScorpionTank_BeamWeaponLoopMS"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_01"
+		FireFX="FX_NODSpitfireFire"
+		FireVeteranFX="FX_NODSpitfireFireHeroic"
+ 		>
+		<PreAttackDelay
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<FiringDuration
+			MinSeconds="2.36s"
+			MaxSeconds="2.36s" />
+		<ClipReloadTime
+			MinSeconds="0.95s"
+			MaxSeconds="1.0s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="520.0"
+				DelayTimeSeconds="0.05s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "50%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "93%">
+					<Filter Rule="NONE">
+						<IncludeThing>MarkedOfKaneRaiderTank</IncludeThing>
+						<IncludeThing>NODRaiderTank</IncludeThing>
+						<IncludeThing>BlackHandRaiderTank</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="40"
+				DurationSeconds="5s" />
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="1"
+				HitGroundFX="FX_NODSpitfireHit"/>
+		</Nuggets>
+	</WeaponTemplate>  -->
+
+	<!-- zone raider allied husk targeting fix -->
+
+	<WeaponTemplate
+		id="ZoneRaiderSonicRifleWarhead"
+		Name="ZoneRaiderSonicRifleWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="false"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE">
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="250.0"
+				Radius="50.0"
+				DamageTaperOff="20.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_ECHOCANNON"
+				DeathType="NORMAL">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			<!-- workaround to hit allied husks -->
+			<DamageNugget
+				Damage="250.0"
+				Radius="50.0"
+				DamageTaperOff="20.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_ECHOCANNON"
+				DeathType="NORMAL">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- hardpoint weapon, to prevent the juggernaut from undeploying. -->
+	<WeaponTemplate
+		id="GDIJuggernaughtArtilleryFake1"
+		Name="GDIJuggernaughtArtilleryFake1"
+		AttackRange="600.0"
+		WeaponSpeed="500"
+		ClipSize="1"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		FireFX=""
+		FireVeteranFX=""
+		RequiredFiringObjectStatus="DEPLOYED"
+		CheckStatusFlagsInRangeChecks="false"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="9999s"
+			MaxSeconds="9999s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar="0.001%">
+					<Filter
+						Rule="ALL" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- keeps the unit deployed at this range , nothing more -->
+	<WeaponTemplate
+		id="GDIJuggernaughtArtilleryFake"
+		Name="GDIJuggernaughtArtilleryFake"
+		AttackRange="100.0"
+		WeaponSpeed="500"
+		ClipSize="1"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		FireFX=""
+		FireVeteranFX=""
+		RequiredFiringObjectStatus="DEPLOYED"
+		CheckStatusFlagsInRangeChecks="false"
+	>
+		<ClipReloadTime
+			MinSeconds="0.01s"
+			MaxSeconds="0.01s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar="0.001%">
+					<Filter
+						Rule="ALL" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- undeploys the unit when GDIJuggernaughtArtilleryFake is firing. -->
+	<WeaponTemplate
+		id="GDIJuggernaughtArtilleryUndeploy"
+		Name="GDIJuggernaughtArtilleryUndeploy"
+		AttackRange="100.0"
+		WeaponSpeed="500"
+		ClipSize="1"
+		RadiusDamageAffects="ALLIES SELF"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		ReAcquireDetailType="PER_SHOT"
+		FireFX=""
+		FireVeteranFX=""
+		RequiredFiringObjectStatus="DEPLOYED"
+		CheckStatusFlagsInRangeChecks="false"
+	>
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s" />
+		<Nuggets>
+			<MetaImpactNugget
+				ShockWaveAmount="5.0"
+				ShockWaveRadius="5.0"
+				CyclonicFactor="0.05"
+				FlipDirection="false"
+				RequiredObjectStatus="DEPLOYED"
+				ForbiddenTargetModelCondition=""
+				ShockWaveZMult="0">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					AcceptModelCondition="WEAPONSLOTID_03"
+					RejectModelCondition="">
+					<IncludeThing>GDIJuggernaught</IncludeThing>
+					<IncludeThing>SteelTalonsBehemoth</IncludeThing>
+				</SpecialObjectFilter>
+			</MetaImpactNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- shatterers now kill friendly neutral and enemy husks -->
+
+	<WeaponTemplate
+		id="ShattererSweepWeapon2"
+		Name="ShattererSweepWeapon2"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<!-- For killing husks -->
+			<DamageNugget
+				Damage="1000.0"
+				Radius="20"
+				DamageType="CANNON">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="HUSK TIBERIUM">
+				</SpecialObjectFilter>
+			</DamageNugget>
+			<!-- As friendly-fire is disabled on the sonic wave, we use this for damaging targeted
+			single allies -->
+			<DamageNugget
+				Damage="1000.0"
+				Radius="20"
+				DamageType="CANNON">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Relationship="ALLIES NEUTRAL"
+					Include="VEHICLE INFANTRY STRUCTURE">
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SteelTalonsOverloadBeamWarhead"
+		Name="SteelTalonsOverloadBeamWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE">
+		<Nuggets>
+			<!-- Note the wave ALSO does an additional 1000 dmg on the sp target (and any enemy
+			along the way) -->
+			<DamageNugget
+				Damage="1500.0"
+				Radius="20"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Relationship="ENEMIES"
+					Exclude="HUSK TIBERIUM">
+				</SpecialObjectFilter>
+			</DamageNugget>
+			<!-- 1000 more dmg because the wave does NOT damage husks at all -->
+			<DamageNugget
+				Damage="2500.0"
+				Radius="20"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="HUSK TIBERIUM">
+				</SpecialObjectFilter>
+			</DamageNugget>
+			<!-- 1000 more dmg because the wave no longer damages allies -->
+			<DamageNugget
+				Damage="2500.0"
+				Radius="20"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Relationship="ALLIES NEUTRAL">
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- cultist nerf -->
+
+	<WeaponTemplate
+		id="CultistMindControlWeaponTrigger"
+		Name="CultistMindControlWeaponTrigger"
+		AttackRange="180.0"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="180d"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.25s"
+			MaxSeconds="0.25s" />
+		<ClipReloadTime
+			MinSeconds="15s"
+			MaxSeconds="15s" />
+		<Nuggets>
+			<SpecialPowerNugget
+				SpecialPowerTemplate="SpecialPower_CultistMindControlGetInRange" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="CultistMindControlWeaponRangeFinder"
+		Name="CultistMindControlWeaponRangeFinder"
+		AttackRange="210.0"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="180d"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.25s"
+			MaxSeconds="0.25s" />
+		<ClipReloadTime
+			MinSeconds="15s"
+			MaxSeconds="15s" />
+		<Nuggets>
+			<SpecialPowerNugget
+				SpecialPowerTemplate="SpecialPower_CultistMindControlGetInRange" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NodMobileArtilleryBombardCannon"
+		Name="NodMobileArtilleryBombardCannon"
+		AttackRange="50000.0"
+		WeaponSpeed="300"
+		MinWeaponSpeed="300"
+		MaxWeaponSpeed="350"
+		MinimumAttackRange="300.0"
+		MinTargetPitch="-30d"
+		MaxTargetPitch="30d"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		ReAcquireDetailType="PER_SHOT"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		FireFX="FX_NODMobileArtilleryBombardCannon"
+		ShotsPerBarrel="1"
+		DisableScatterForTargetsOnWall="true"
+		FireVeteranFX="FX_NODMobileArtilleryBombardCannonHeroic"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+	>
+		<ClipReloadTime MinSeconds="5s"
+			MaxSeconds="5s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="NODMobileArtilleryWarhead"
+				ProjectileTemplate="NodMobileArtilleryShell">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="NodMobileArtilleryShell_Veteran" />
+			</ProjectileNugget>
+		</Nuggets>
+		<ScatterRadiusVsType
+			Radius="50.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+		<ScatterRadiusVsType
+			Radius="50.0">
+			<Filter
+				Rule="NONE"
+				Include="VEHICLE" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<!-- reload reduced by 10% , range increased to match sniper team -->
+
+	<WeaponTemplate
+		id="MARVSniperWeapon"
+		Name="MARVSniperWeapon"
+		AttackRange="470.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="2"
+		RotatingTurret="true"
+		CanFireWhileMoving="true"
+		FireSound="AudioEvent:GDI_Sniper_RifleFire"
+		FireFX="FX_GDISniperFire"
+		FireVeteranFX="FX_GDISniperFireHeroic">
+		<PreAttackDelay
+			MinSeconds=".2s"
+			MaxSeconds=".2s" />
+		<FiringDuration
+			MinSeconds="0.20s"
+			MaxSeconds="0.22s" />
+		<ClipReloadTime
+			MinSeconds="1.89s"
+			MaxSeconds="1.89s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="500.0"
+				Radius="0.0"
+				DelayTimeSeconds="0s"
+				DamageType="SNIPER"
+				DamageFXType="GDI_RIFLE"
+				DeathType="NORMAL">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="STRUCTURE FS_BASE_DEFENSE VEHICLE" />
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="15.0"
+				Suppression="250"
+				DurationSeconds="10s">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="STRUCTURE FS_BASE_DEFENSE VEHICLE" />
+			</SuppressionNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- MARV grenade damage increased vs structures by 25% -->
+
+	<WeaponTemplate
+		id="MARVGrenadeSoldierWeaponWarhead"
+		Name="MARVGrenadeSoldierWeaponWarhead"
+		ProjectileCollidesWith="ENEMIES"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		HitStoredTarget="true"
+	>
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="100"
+				WindowBlastFX="FX_ClearGarrison"
+				Damage="1500000"
+				DamageType="GRENADE"
+				DeathType="EXPLODED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="200.0"
+				Radius="20.0"
+				DamageType="GRENADE"
+				DamageFXType="GDI_GRENADE"
+				DeathType="EXPLODED">
+				<DamageScalarDetails Scalar="125%">
+					<Filter
+						Rule="NONE"
+						Include="STRUCTURE" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+		<HitStoredObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE" />
+	</WeaponTemplate>
+
+	<!-- AP Ammo grants a 25% increase. -->
+	<WeaponTemplate
+		id="MARVRifleWeaponAPAmmo"
+		Name="MARVRifleWeaponAPAmmo"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_GDIHammerheadChaingunAP"
+		FireVeteranFX="FX_GDIHammerheadChaingunAPHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ReAcquireDetailType="PER_CLIP"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		ClipSize="2"
+		AutoReloadsClip="AUTO"
+		RotatingTurret="true">
+		<ClipReloadTime
+			MinSeconds="0.08s"
+			MaxSeconds="0.08s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="43.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="GDI_MACHINEGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="1.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="MARVRifleWeapon"
+		Name="MARVRifleWeapon"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_GDIHammerheadChaingunAP"
+		FireVeteranFX="FX_GDIHammerheadChaingunAPHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ReAcquireDetailType="PER_CLIP"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		ClipSize="2"
+		AutoReloadsClip="AUTO"
+		RotatingTurret="true">
+		<ClipReloadTime
+			MinSeconds="0.08s"
+			MaxSeconds="0.08s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="35.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="GDI_MACHINEGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="1.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODWarmechRocket"
+		Name="NODWarmechRocket"
+		AttackRange="300.0"
+		WeaponSpeed="200"
+		MinWeaponSpeed="300"
+		MaxWeaponSpeed="310"
+		AcceptableAimDelta="60d"
+		ForbiddenFiringObjectStatus=""
+		PreAttackType="PER_SHOT"
+		FireFX="FX_NODRedeemerUpgradeRocketLauncherFire"
+		FireVeteranFX="FX_NODRedeemerUpgradeRocketLauncherFire"
+		ClipSize="3"
+		RotatingTurret="true"
+		AutoReloadsClip="AUTO"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		CanFireWhileMoving="true"
+	>
+		<PreAttackDelay
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="4s"
+			MaxSeconds="4s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="NODWarmechRocketWarhead"
+				ProjectileTemplate="NODStealthTankRocketProjectile">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="NODStealthTankRocketProjectile_Veteran" />
+			</ProjectileNugget>
+		</Nuggets>
+		<ScatterRadiusVsType
+			Radius="30.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODWarmechRocketWarhead"
+		Name="NODWarmechRocketWarhead"
+		ProjectileCollidesWith="ENEMIES"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+				Damage="405.0"
+				Radius="10.0"
+				DamageTaperOff="0"
+				DamageType="ROCKET"
+				DamageFXType="NOD_MISSILE"
+				DeathType="EXPLODED">
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="75"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- tiberium trooper redeemer more range -->
+
+	<WeaponTemplate id="NODWarmechTibWeaponRight"
+		Name="NODWarmechTibWeaponRight"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FiringLoopSound="Multisound:NOD_Redeemer_TiberiumTrooperWeaponMS"
+		FiringLoopSoundContinuesDuringReload="false"
+		AcceptableAimDelta="10d"
+		RequiredFiringObjectStatus=""
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		ClipSize="20"
+		RotatingTurret="true"
+		CanFireWhileMoving="True"
+		ReAcquireDetailType="PER_CLIP">
+
+		<PreAttackDelay
+			MinSeconds="0s"
+			MaxSeconds="1s" />
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.2s"
+			MaxSeconds="0.4s" />
+
+		<Nuggets>
+
+			<ActivateStreamNugget
+				Lifetime="0.75s"
+				StreamId="0" />
+			<!-- Damage to all infantry, with spawning if dead 40 default-->
+			<DamageNugget
+				Damage="75.0"
+				Radius="40.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="INFANTRY">
+				</SpecialObjectFilter>
+			</DamageNugget>
+
+			<!-- regular damage to corrupted infantry -->
+			<DamageNugget
+				Damage="75.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter Rule="NONE">
+					<IncludeThing>CorruptedInfantry</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+
+			<!-- Damage to all non-infantry -->
+			<DamageNugget
+				Damage="75.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="INFANTRY HORDE STRUCTURE HUSK"
+				/>
+			</DamageNugget>
+
+			<!-- Damage to structures and husks -->
+			<DamageNugget
+				Damage="125.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="STRUCTURE HUSK"
+				/>
+				<DamageScalarDetails Scalar="300%">
+					<Filter
+						Rule="NONE"
+						Include="HUSK" />
+				</DamageScalarDetails>
+			</DamageNugget>
+
+			<!-- Garrison clear -->
+			<DamageContainedNugget
+				MaxUnitsToDamage="100"
+				Damage="1500000"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DeathType="EXPLODED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+
+			<!-- VEHICLE SLOW -->
+			<AttributeModifierNugget
+				Radius="25.0"
+				PartitionFilterTestType="CIRCLE"
+				AttributeModifierName="AttributeModifier_TibGoo">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="VEHICLE">
+					<ExcludeThing>NODAvatar</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneAvatar</ExcludeThing>
+					<ExcludeThing>BlackHandCustomWarmech</ExcludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate id="NODWarmechTibWeaponLeft"
+		Name="NODWarmechTibWeaponLeft"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FiringLoopSound="Multisound:NOD_Redeemer_TiberiumTrooperWeaponMS"
+		FiringLoopSoundContinuesDuringReload="false"
+		RequiredFiringObjectStatus=""
+		AcceptableAimDelta="10d"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		ClipSize="20"
+		RotatingTurret="true"
+		CanFireWhileMoving="True"
+		ReAcquireDetailType="PER_CLIP">
+
+		<PreAttackDelay
+			MinSeconds="0s"
+			MaxSeconds="1s" />
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.2s"
+			MaxSeconds="0.4s" />
+
+		<Nuggets>
+			<ActivateStreamNugget
+				Lifetime="0.75s"
+				StreamId="1" />
+			<!-- Damage to all infantry, with spawning if dead 40 default-->
+			<DamageNugget
+				Damage="75.0"
+				Radius="40.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="INFANTRY">
+				</SpecialObjectFilter>
+			</DamageNugget>
+
+			<!-- regular damage to corrupted infantry -->
+			<DamageNugget
+				Damage="75.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter Rule="NONE">
+					<IncludeThing>CorruptedInfantry</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+
+			<!-- Damage to all non-infantry -->
+			<DamageNugget
+				Damage="75.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="INFANTRY HORDE STRUCTURE HUSK"
+				/>
+			</DamageNugget>
+
+			<!-- Damage to structures and husks -->
+			<DamageNugget
+				Damage="125.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="STRUCTURE HUSK"
+				/>
+				<DamageScalarDetails Scalar="300%">
+					<Filter
+						Rule="NONE"
+						Include="HUSK" />
+				</DamageScalarDetails>
+			</DamageNugget>
+
+			<!-- Garrison clear -->
+			<DamageContainedNugget
+				MaxUnitsToDamage="100"
+				Damage="1500000"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DeathType="EXPLODED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+
+			<!-- VEHICLE SLOW -->
+			<AttributeModifierNugget
+				Radius="25.0"
+				PartitionFilterTestType="CIRCLE"
+				AttributeModifierName="AttributeModifier_TibGoo">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="VEHICLE">
+					<ExcludeThing>NODAvatar</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneAvatar</ExcludeThing>
+					<ExcludeThing>BlackHandCustomWarmech</ExcludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="BHRedeemerFlamer"
+		Name="BHRedeemerFlamer"
+		AttackRange="200.0"
+		CanFireWhileMoving="true"
+		WeaponSpeed="999999.0"
+		FiringLoopSound="AudioEvent:NOD_FlameTank_FlameWeaponLoop"
+		ForbiddenFiringObjectStatus=""
+		FiringLoopSoundContinuesDuringReload="true"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_01"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ClipSize="10"
+		RotatingTurret="true"
+		AcceptableAimDelta="20d"
+		ReAcquireDetailType="PER_CLIP"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="10"
+				Damage="1500000"
+				DamageType="GRENADE"
+				DeathType="BURNED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="195.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED" />
+			<SuppressionNugget
+				Radius="40.0"
+				Suppression="200"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="BHWarmechFlamer"
+		Name="BHWarmechFlamer"
+		AttackRange="200.0"
+		CanFireWhileMoving="true"
+		WeaponSpeed="999999.0"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		FiringLoopSound="AudioEvent:NOD_FlameTank_FlameWeaponLoop"
+		FiringLoopSoundContinuesDuringReload="true"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ClipSize="10"
+		RotatingTurret="true"
+		AcceptableAimDelta="20d"
+		ReAcquireDetailType="PER_CLIP"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="10"
+				Damage="1500000"
+				DamageType="GRENADE"
+				DeathType="BURNED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="144.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED" />
+			<SuppressionNugget
+				Radius="40.0"
+				Suppression="200"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- Redeemer R23 BH particle beams -->
+
+	<WeaponTemplate
+		id="NODWarmechParticleBeam"
+		Name="NODWarmechParticleBeam"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_BlackHand_ShredderTurret_ChargedParticleBeamFire"
+		FireVeteranFX="FX_BlackHand_ShredderTurret_ChargedParticleBeamFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="9"
+		RotatingTurret="true"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+	>
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.3s"
+			MaxSeconds="0.4s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.25s"
+				LaserId="4"
+				HitGroundFX="FX_ChargedParticleBeamHitG" />
+			<DamageNugget
+				Damage="80.0"
+				Radius="0.0"
+				DamageType="GUN" DamageFXType="NOD_PARTICLEBM"
+				DeathType="LASERED">
+			</DamageNugget>
+
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- Redeemer R23 MoK particle beams -->
+
+	<WeaponTemplate
+		id="NODWarmechSuperParticleBeam"
+		Name="NODWarmechSuperParticleBeam"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_MarkedOfKane_ShredderTurret_ChargedParticleBeamFire"
+		FireVeteranFX="FX_MarkedOfKane_ShredderTurret_ChargedParticleBeamFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="9"
+		RotatingTurret="true"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+	>
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.3s"
+			MaxSeconds="0.4s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.25s"
+				LaserId="4"
+				HitGroundFX="FX_ChargedParticleBeamHit" />
+			<DamageNugget
+				Damage="80.0"
+				Radius="0.0"
+				DamageType="GUN" DamageFXType="NOD_PARTICLEBM"
+				DeathType="LASERED">
+				<DamageScalarDetails Scalar="125%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODWarmechMachinegun"
+		Name="NODWarmechMachinegun"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireSound="AudioEvent:NOD_Redeemer_GunTurretFire"
+		FireFX="FX_NODRedeemerUpgradeMachineGunFire"
+		FireVeteranFX="FX_GDIRifleManFireHeroic2"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_02"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="18"
+		RotatingTurret="true"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.6s"
+			MaxSeconds="0.7s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="50.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="NOD_MACHINEGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODWarmechFakeWeapon"
+		Name="NODWarmechMachinegunFake"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		RotatingTurret="true"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="9999s"
+			MaxSeconds="9999s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL" />
+		</Nuggets>
+	</WeaponTemplate>
+
+</AssetDeclaration>

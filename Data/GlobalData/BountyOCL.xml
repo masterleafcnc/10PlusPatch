@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<ObjectCreationList
+		id="OCL_EmitterBounty1">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_1"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyEmitter</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_EmitterBounty2">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_2"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyEmitter</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_EmitterBounty3">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_3"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyEmitter</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+
+	<ObjectCreationList
+		id="OCL_EmitterBounty4">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_4"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyEmitter</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_EmitterBounty5">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_5"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyEmitter</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_EmitterBounty6">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_6"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyEmitter</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_EmitterBounty7">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_7"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyEmitter</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+
+	<ObjectCreationList
+		id="OCL_EmitterBounty8">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_8"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyEmitter</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<!-- shatterer ocl -->
+
+	<ObjectCreationList
+		id="OCL_ShatBounty1">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_1"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyShatterer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_ShatBounty2">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_2"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyShatterer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_ShatBounty3">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_3"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyShatterer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+
+	<ObjectCreationList
+		id="OCL_ShatBounty4">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_4"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyShatterer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_ShatBounty5">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_5"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyShatterer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_ShatBounty6">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_6"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyShatterer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_ShatBounty7">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_7"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyShatterer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+
+	<ObjectCreationList
+		id="OCL_ShatBounty8">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_8"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>BountyDummyShatterer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+
+</AssetDeclaration>

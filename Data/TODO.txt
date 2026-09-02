@@ -1,0 +1,24 @@
+
+Done
+- Garrisoned infantry inside of Hammerheads can now shoot over structures -> limited to Zone Troopers, Zone Raiders, Missile Squads, Riflemen Squads, Grenadier squads.
+- Implemented V35 vision fix for all GDI factions
+- Fixed squad veterancy issue for Mechapedes, Sniper Teams, Black Diciples, Confessor Leaders.
+- Fixed walking step sounds on a few units.
+- Implement Carryall vision fix for all Nod factions
+- Fix an issue with MCVs causing them to ignore move commands while packing up.
+- Fix an issue causing phased EMPd units to never relinquish the phased status or visual fx after the timer has elapsed.
+- Juggernaut/Behemoth turret turn speed increased from 40 to 50.
+- Buff rifle squad damage vs disintegrators by 10%.
+- Buff Hammerhead landing time when picking up, dropping off infantry delay after loading/unloading.
+- Fix Traveler Engine mesh on Devastator Warships when inside Ion Storms.
+- Fixed Rage Generator model state extended beyond the intended 6 seconds on units affected by EMP 
+- Make it so units affected by rage generator, hallucinogenic grenades cannot be controlled by players throughout the duration.
+- Reduce Avatar hp to 9500 to speed up repair speed, compensate via armor buffs. 
+- Tweak stasis shield so units on the edge are paralyzed.
+- Nerfed MaximumAimDelta of the gunwalker, shardwalker weapon from 25d to 15d.
+- Fixed an issue causing supersonic airstrike to not deal damage to aircraft on uneven terrain.
+- Fixed an issue causing Firehawk Stratofighter boosters to disappear while climbing hills.
+- Fixed an issue that causes Sonic Emitters and Shatterers to have their weapon shot cancelled as theyre destroyed. 
+- Fixed a bug causing Firehawks to not bomb sometimes when a player issued force fire command happens.
+- Nerfed Zone Raider AA damage from 140 to 120.
+- Implement the free infantry exploit fix to all squads in the game

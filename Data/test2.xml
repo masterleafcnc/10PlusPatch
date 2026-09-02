@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>
+		<Include type="all" source="GlobalData/AttributeModifier.xml" />
+		<Include source="KillSonicObjectTimer.xml" type="all"/>
+		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
+		<Include source="GDI\Units\ZOCOMImprovedSonicTankRubble.xml" type="all"/>
+		<Include source="New Objects\GDISonicTank.xml" type="all"/>
+		<Include source="GDI\Units\GDISonicTankRubble.xml" type="all"/>
+		<Include source="GDI\Structures\GDITerraformingStationRubble.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMTerraformingStation.xml" type="all"/>
+		<Include source="GlobalData\ExperienceLevelsR25.xml" type="all"/>
+		<Include source="GlobalData\ObjectCreationListsR25.xml" type="all"/>
+		<Include source="GlobalData/WeaponR21.xml" type="all"/>
+		<Include source="GlobalData/upgrade.xml" type="all"/>
+		<Include source="GlobalData/WeaponR25.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMFireHawk.xml" type="all"/>
+		<Include source="Alien\Units\alienplanetaryassaultcarrier.xml" type="all"/>
+		<Include source="GDI\Structures\GDITerraformingStation.xml" type="all"/>
+		<Include source="GDI\Structures\GDITerraformingStationDummy.xml" type="all"/>
+		<Include source="Alien\Units\AlienInvaderFighter.xml" type="all"/>
+	</Includes>
+
+</AssetDeclaration>

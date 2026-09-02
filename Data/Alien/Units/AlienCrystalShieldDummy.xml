@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<GameObject
+		id="AlienCrystalShieldDummy"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		TransportSlotCount="0"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE NOT_AUTOACQUIRABLE IMMOBILE CAN_CAST_REFLECTIONS STRUCTURE RESIST_EMP IGNORED_IN_FINDPOSITIONAROUND"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="AlienCrystalShieldDummy">
+		<DisplayName>AlienCrystalShieldDummy</DisplayName>
+		<ArmorSet
+			Armor="StructureArmor"
+			DamageFX="GenericStructureDamageFX" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<!-- the slow death is for being blown up -->
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="0.5s"
+				SinkRate="2.4"
+				DestructionDelay="5s">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="FADED" />
+			</SlowDeath>
+
+			<SpecialPower 
+				id="ModuleTag_GivePackUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantPackUpgrade"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GivePackUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantPackUpgrade"
+				UpgradeToGive="Upgrade_Pack"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="0s"
+				DisabledDuringUnpack="false"
+				CheckBuildAssistant="false">
+				<TriggeredBy>Upgrade_Pack</TriggeredBy>
+				<ReplacementTemplate>AlienCrystalShieldVehicleDummy</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_SoWeCanUseWeapon"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="CrystalShieldDummyFunctions" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="3000.0" />
+		</Body>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="125"
+			ShroudClearingRange="150" />
+	</GameObject>
+</AssetDeclaration>

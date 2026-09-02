@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<ObjectCreationList
+		id="OCL_GenericTreeCrusher">
+		<CreateObject
+			Disposition="LIKE_EXISTING"
+			Options="IGNORE_ALL_OBJECTS">
+			<Offset z="-50"/>
+			<CreateObject>GenericTreeCrusher</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_DestroyedSonicTank">
+		<CreateObject
+			Options="USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="RELATIVE_ANGLE">
+			<CreateObject>GDISonicTankRubble</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>KillSonicObjectTimer</CreateObject>
+		</CreateObject> 
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_DestroyedImprovedSonicTank">
+		<CreateObject
+			Options="USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="RELATIVE_ANGLE">
+			<CreateObject>ZOCOMImprovedSonicTankRubble</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>KillSonicObjectTimer</CreateObject>
+		</CreateObject> 
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_DestroyedSonicEmitter">
+		<CreateObject
+			Options="USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="RELATIVE_ANGLE">
+			<CreateObject>GDITerraformingStationRubble</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>KillSonicObjectTimer</CreateObject>
+		</CreateObject> 
+	</ObjectCreationList>
+
+	<!-- used for phase fix-->
+	<ObjectCreationList
+		id="OCL_PhaseDummy">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>PhaseDummy</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<!-- used for rage fix-->
+	<ObjectCreationList
+		id="OCL_RageDummy">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>RageDummy</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+
+	<!-- temp model state added for GDI faction units that were acquired from sold off, destroyed structures -->
+	<!-- everything but gdi mcvs and rig ocls -->
+
+	<ObjectCreationList
+		id="OCL_GenericGDIBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>GDIRifleSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericGDIBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>GDIRifleSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_GenericZOCOMBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>ZOCOMRifleSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericZOCOMBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>ZOCOMRifleSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_GenericSteelTalonsBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>SteelTalonsRifleSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericSteelTalonsBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>SteelTalonsRifleSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_AdvancedSteelTalonsBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>SteelTalonsGrenadeSoldierSquad</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>SteelTalonsRifleSoldierSquad</CreateObject>
+		</CreateObject>		
+	</ObjectCreationList>
+
+	<!-- st t4 -->
+
+	<ObjectCreationList
+		id="OCL_AdvancedSteelTalonsBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>SteelTalonsGrenadeSoldierSquad</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>SteelTalonsRifleSoldierSquad</CreateObject>
+		</CreateObject>		
+	</ObjectCreationList>	
+
+	<!-- tech centers -->
+
+	<ObjectCreationList
+		id="OCL_ArmoryGDIBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>GDIGrenadeSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_ArmoryGDIBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>GDIGrenadeSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_ArmoryZOCOMBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>ZOCOMGrenadeSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_ArmoryZOCOMBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>ZOCOMGrenadeSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+
+	<ObjectCreationList
+		id="OCL_ArmorySteelTalonsBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>SteelTalonsGrenadeSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_ArmorySteelTalonsBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>SteelTalonsGrenadeSoldierSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+
+	<!-- gdi t4 -->
+
+	<ObjectCreationList
+		id="OCL_AdvancedGDIBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>GDIZoneTrooperSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_AdvancedGDIBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>GDIZoneTrooperSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<!-- zocom t4 -->
+
+	<ObjectCreationList
+		id="OCL_AdvancedZOCOMBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>ZOCOMZoneRaiderSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_AdvancedZOCOMBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>ZOCOMZoneRaiderSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+
+	<ObjectCreationList
+		id="OCL_GDIZoneTrooperSquad">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE"
+			MinForceMagnitude="3.0"
+			MaxForceMagnitude="8.0"
+			DispositionIntensity="5.0"
+			OrientationOffset="0.0d"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="30d"
+			MaxForcePitch="85d"
+			VelocityScale="5.0">
+			<Offset
+				x="-15.41"
+				y="0.0"
+				z="18.09"></Offset>
+			<CreateObject>GDIDropPod_DR01</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE"
+			MinForceMagnitude="3.0"
+			MaxForceMagnitude="8.0"
+			DispositionIntensity="5.0"
+			OrientationOffset="120.0d"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="30d"
+			MaxForcePitch="85d"
+			VelocityScale="5.0">
+			<Offset
+				x="7.46"
+				y="-13.19"
+				z="17.99"></Offset>
+			<CreateObject>GDIDropPod_DR02</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE"
+			MinForceMagnitude="3.0"
+			MaxForceMagnitude="8.0"
+			DispositionIntensity="5.0"
+			OrientationOffset="240.0d"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="30d"
+			MaxForcePitch="85d"
+			VelocityScale="5.0">
+			<Offset
+				x="7.46"
+				y="13.19"
+				z="17.99"></Offset>
+			<CreateObject>GDIDropPod_DR03</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="ON_GROUND_ALIGNED SPAWN_AROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			StartingBusyTime="2s"
+			JustBuiltFrames="2s">
+			<Offset
+				x="20.0"
+				y="-30.0"
+				z="0.0"></Offset>
+			<CreateObject>GDIZoneTrooperSquad_Veteran</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="ON_GROUND_ALIGNED SPAWN_AROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			StartingBusyTime="2s"
+			JustBuiltFrames="2s">
+			<Offset
+				x="20.0"
+				y="30.0"
+				z="0.0"></Offset>
+			<CreateObject>GDIZoneTrooperSquad_Veteran</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="ON_GROUND_ALIGNED SPAWN_AROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			StartingBusyTime="2s"
+			JustBuiltFrames="2s">
+			<Offset
+				x="0.0"
+				y="37.5"
+				z="0.0"></Offset>
+			<CreateObject>GDIZoneTrooperSquad_Veteran</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_ZOCOMZoneRaiderSquad">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE"
+			MinForceMagnitude="3.0"
+			MaxForceMagnitude="8.0"
+			DispositionIntensity="5.0"
+			OrientationOffset="0.0d"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="30d"
+			MaxForcePitch="85d"
+			VelocityScale="5.0">
+			<Offset
+				x="-15.41"
+				y="0.0"
+				z="18.09"></Offset>
+			<CreateObject>GDIDropPod_DR01</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE"
+			MinForceMagnitude="3.0"
+			MaxForceMagnitude="8.0"
+			DispositionIntensity="5.0"
+			OrientationOffset="120.0d"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="30d"
+			MaxForcePitch="85d"
+			VelocityScale="5.0">
+			<Offset
+				x="7.46"
+				y="-13.19"
+				z="17.99"></Offset>
+			<CreateObject>GDIDropPod_DR02</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE"
+			MinForceMagnitude="3.0"
+			MaxForceMagnitude="8.0"
+			DispositionIntensity="5.0"
+			OrientationOffset="240.0d"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="30d"
+			MaxForcePitch="85d"
+			VelocityScale="5.0">
+			<Offset
+				x="7.46"
+				y="13.19"
+				z="17.99"></Offset>
+			<CreateObject>GDIDropPod_DR03</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="ON_GROUND_ALIGNED SPAWN_AROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			StartingBusyTime="2s"
+			JustBuiltFrames="2s">
+			<Offset
+				x="20.0"
+				y="-30.0"
+				z="0.0"></Offset>
+			<CreateObject>ZOCOMZoneRaiderSquad_Veteran</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="ON_GROUND_ALIGNED SPAWN_AROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			StartingBusyTime="2s"
+			JustBuiltFrames="2s">
+			<Offset
+				x="20.0"
+				y="30.0"
+				z="0.0"></Offset>
+			<CreateObject>ZOCOMZoneRaiderSquad_Veteran</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="ON_GROUND_ALIGNED SPAWN_AROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			StartingBusyTime="2s"
+			JustBuiltFrames="2s">
+			<Offset
+				x="0.0"
+				y="37.5"
+				z="0.0"></Offset>
+			<CreateObject>ZOCOMZoneRaiderSquad_Veteran</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+</AssetDeclaration>
