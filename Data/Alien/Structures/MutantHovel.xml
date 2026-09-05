@@ -2,7 +2,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
 		id="MutantHovel"
-		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS STRUCTURE FS_TECHNOLOGY AUTO_RALLYPOINT NOT_AUTOACQUIRABLE NOT_SELLABLE NEUTRAL_TECH"
+		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS STRUCTURE FS_TECHNOLOGY AUTO_RALLYPOINT NOT_AUTOACQUIRABLE NEUTRAL_TECH"
 		Description="Desc:TechBuildingMutantHovel"
 		RadarPriority="STRUCTURE"
 		BuildCompletion="INVALID"
@@ -67,7 +67,7 @@
 		ReinvisibilityDelay="4s"
 		CaptureTime="0s"
 		BuildCost="1000"
-		RefundValue="0"
+		RefundValue="500"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
 		TransportSlotCount="0"
