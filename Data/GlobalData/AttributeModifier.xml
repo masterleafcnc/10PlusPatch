@@ -423,7 +423,7 @@
 		id="Modifier_NODDozerBlades"
 		ModelConditionsSet="UPGRADED_ARMOR"
 		Category="NONE">
-		<Modifier Type="ARMOR" Value="80%" />
+		<Modifier Type="ARMOR" Value="85%" />
 		<Modifier Type="CRUSHER_LEVEL" Value="100%" />
 	</AttributeModifier>
 
