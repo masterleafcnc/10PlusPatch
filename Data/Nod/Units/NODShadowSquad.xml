@@ -97,11 +97,11 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="90"
+			Speed="80"
 			Condition="NORMAL"
 			Locomotor="NormalRangedSquadLocomotor" />
 		<LocomotorSet
-			Speed="120"
+			Speed="100"
 			Condition="NORMAL_UPGRADED"
 			Locomotor="FlyingShadowSquadLocomotor" />
 		<SkirmishAIInformation
@@ -1566,4 +1566,3 @@
 			CrushAllies="False" />
 	</GameObject>
 </AssetDeclaration>
-
