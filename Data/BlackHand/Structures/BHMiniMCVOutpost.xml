@@ -205,7 +205,7 @@
 			<StructureUnpackUpdate
 				id="ModuleTag_SUU"
 				UnpackCompleteSound="Multisound:NOD_Outpost_UnpackCompleteMS"
-				UnpackTime="20.0s" />
+				UnpackTime="30.0s" />
 			<CreateObjectDie 
 				id="ModuleTag_CreateOccupiedDie"
 				CreationList="OCL_GenericBlackHandBuildingDestruction" >

@@ -207,7 +207,7 @@
 			</FXListBehavior>
 			<StructureUnpackUpdate
 				UnpackCompleteSound="Multisound:GDI_Outpost_UnpackCompleteMS"
-				UnpackTime="20s" />
+				UnpackTime="30s" />
 			<RepairUpdate
 				id="ModuleTag_RepairUpdate">
 				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
