@@ -1903,7 +1903,7 @@
 		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
 		<Nuggets>
 			<DamageNugget
-				Damage="120.0"
+				Damage="100.0"
 				Radius="0.0"
 				DamageType="GUN"
 				DeathType="NORMAL"
@@ -1930,7 +1930,7 @@
 		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
 		<Nuggets>
 			<DamageNugget
-				Damage="160.0"
+				Damage="140.0"
 				Radius="0.0"
 				DamageType="GUN"
 				DamageFXType="ALIEN_TIBSHARDBLUE"
@@ -1996,7 +1996,7 @@
 		  id="AlienShardWalkerBlueShardWeapon"
 		  Name="AlienShardWalkerBlueShardWeapon"
 		  AttackRange="300.0"
-		  WeaponSpeed="500.0"
+		  WeaponSpeed="600.0"
 		  FireSound="Multisound:ALI_GunWalker_BlueShardWeaponFireMS"
 		  FireFX="FX_AlienTibShardFireBlue"
 		  FireVeteranFX="FX_AlienTibShardFireHeroic"
@@ -2027,7 +2027,7 @@
 		  id="AlienShardWalkerWeapon"
 		  Name="AlienShardWalkerWeapon"
 		  AttackRange="300.0"
-		  WeaponSpeed="500.0"
+		  WeaponSpeed="600.0"
 		  FireSound="Multisound:ALI_GunWalker_ShardWeaponFireMS"
 		  FireFX="FX_AlienTibShardFire"
 		  FireVeteranFX="FX_AlienTibShardFireHeroic"
