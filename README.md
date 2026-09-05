@@ -1,10 +1,8 @@
-# 101PlusPatch
+# 1.00+ Patch
 
 The 1.00+ Patch is based on the R24u Patch by Masterleaf. See the [R21–R24 changelog](https://docs.google.com/document/d/1LMfH_2jcBjOpHu4E0ZB7yAgqojlhO2nA55yLw-DXzMM/edit?tab=t.0) for the changes made in those versions.
 
 ## Changelog
-
-### 1.00+ Patch — June 9, 2026
 
 #### Global
 
