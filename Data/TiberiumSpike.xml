@@ -396,8 +396,8 @@
 			<AutoDepositUpdate
 				id="63AFF4D3"
 				DepositInterval="1s"
-				DepositAmount="10"
-				InitialCaptureBonus="500"
+				DepositAmount="25"
+				InitialCaptureBonus="750"
 				Upgrade=""
 				UpgradeBonusScalar="1"
 				Flags="ACTIVE_WHEN_REPAIRING"
