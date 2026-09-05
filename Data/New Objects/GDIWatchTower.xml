@@ -300,7 +300,7 @@
 			</FXListBehavior>
 			<StructureUnpackUpdate UnpackTime="1.5s" />
 			<StealthDetectorUpdate id="ModuleTag_StealthDetect"
-				DetectionRange="100" />
+				DetectionRange="200" />
 			<RepairUpdate xmlns="uri:ea.com:eala:asset"
 				id="ModuleTag_RepairUpdate">
 				<PercentOfBuildCostToRebuildInfo />
