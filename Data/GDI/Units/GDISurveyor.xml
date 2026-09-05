@@ -32,7 +32,7 @@
 		<LocomotorSet
 			Locomotor="GDISurveyorLocomotor"
 			Condition="NORMAL"
-			Speed="66.0" />
+			Speed="50.0" />
 		<Draws>
 			<TruckDraw
 				id="ModuleTag_Draw"

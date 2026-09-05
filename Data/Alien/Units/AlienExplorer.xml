@@ -97,7 +97,7 @@
 			DamageFX="VehicleDamageFX"
 			Conditions="" />
 		<LocomotorSet
-			Speed="66"
+			Speed="50"
 			Condition="NORMAL"
 			Locomotor="AlienExplorerLocomotor" />
 		<SkirmishAIInformation
