@@ -536,7 +536,7 @@
         <Body>
             <ActiveBody
                 id="ModuleTag_Body"
-                MaxHealth="2800" />
+                MaxHealth="3200" />
         </Body>
         <Geometry
             IsSmall="false">
