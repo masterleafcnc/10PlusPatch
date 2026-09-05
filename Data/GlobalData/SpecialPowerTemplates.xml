@@ -1221,7 +1221,7 @@
 	<SpecialPowerTemplate
 		id="SpecialPowerLaunchCatalystMissile"
 		Flags="IS_PLAYER_POWER WATER_OK SHARED_SYNC"
-		RadiusCursorRadius="120"
+		RadiusCursorRadius="144"
 		ReloadTime="300s"
 		TargetType="LOCATION"
 		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"

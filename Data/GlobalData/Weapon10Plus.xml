@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- The main explosion when the missile hits -->
+	<WeaponTemplate
+		id="NODCatalystMissileWeapon"
+		Name="NODCatalystMissileWeapon"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS"
+		 >
+		<Nuggets>
+			<DamageNugget
+				Damage="500.0"
+				Radius="120.0"
+				DamageType="GRENADE"
+				DamageFXType="NOD_SEED"
+				DeathType="NORMAL" >
+				<DamageScalarDetails Scalar= "0%">
+					<Filter
+						Rule="NONE"
+						Include="TIBERIUM">
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "5000%">
+					<Filter
+						Rule="NONE"
+						Include="TIBERIUM_BASED"
+						Exclude="TIBERIUM">
+						<IncludeThing>GDITiberiumSilo</IncludeThing>
+						<IncludeThing>GDIHarvester</IncludeThing>
+						<IncludeThing>GDIRefinery</IncludeThing>
+						<IncludeThing>ZOCOMTiberiumSilo</IncludeThing>
+						<IncludeThing>ZOCOMHarvester</IncludeThing>
+						<IncludeThing>ZOCOMRefinery</IncludeThing>
+						<IncludeThing>SteelTalonsTiberiumSilo</IncludeThing>
+						<IncludeThing>SteelTalonsHeavyHarvester</IncludeThing>
+						<IncludeThing>SteelTalonsRefinery</IncludeThing>
+						<IncludeThing>NODTiberiumSilo</IncludeThing>
+						<IncludeThing>NODHarvester</IncludeThing>
+						<IncludeThing>NODRefinery</IncludeThing>
+						<IncludeThing>NODTiberiumLiquidationFacility</IncludeThing>
+						<IncludeThing>BlackHandTiberiumSilo</IncludeThing>
+						<IncludeThing>BlackHandHarvester</IncludeThing>
+						<IncludeThing>BlackHandRefinery</IncludeThing>
+						<IncludeThing>BlackHandTiberiumLiquidationFacility</IncludeThing>
+						<IncludeThing>MarkedOfKaneTiberiumSilo</IncludeThing>
+						<IncludeThing>MarkedOfKaneHarvester</IncludeThing>
+						<IncludeThing>MarkedOfKaneRefinery</IncludeThing>
+						<IncludeThing>MarkedOfKaneTiberiumLiquidationFacility</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+
+			<FireOnObjectsNugget
+				Radius="200.0"
+				Weapon="NODCatalystCreationWeapon">
+				<Filter
+					Rule="NONE"
+					Include="TIBERIUM"/>
+			</FireOnObjectsNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+</AssetDeclaration>
