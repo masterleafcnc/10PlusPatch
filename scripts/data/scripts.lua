@@ -1,4 +1,4 @@
--- ============================ SCRIPT VERSION R25h ============================
+-- ============================ SCRIPT VERSION R25i ============================
 -- Note that global vars cannot be accessed via subfunctions!!
 squadtable = {} -- tracks all squad objects on map
 commandeertable = {} -- tracks units commandeered by avatar 
@@ -131,6 +131,7 @@ function IsGroupEmpty(group)
 end
 
 function resetTeamTable(teamTable)
+	 -- Relying only on Lua garbage collection causes multiplayer desyncs.
     clearSubTables(teamTable)
 
     teamTable.units = {}
@@ -419,22 +420,26 @@ end
 function GetHarvesterData(self)
 	if self ~= nil then
 		local a = getObjectId(self)
-		harvesterData[a] = harvesterData[a] or {
-			totalFramesHarvested75Full = 0, -- total number of frames harvested since becoming >= 75% full of tiberium
-			frameOnHarvest75 = 0, -- the frame since becoming >= 75% full of tiberium
-			isHarvestingBlue = false, -- is harvesting blue tiberium or not
-			isAlreadyHarvesting = false, -- the harvester is already harvesting
-			lastCrystalHarvested = nil, -- object reference to the last crystal harvested
-			harvbluetib = 0, -- for counting blue tiberium in harvester
-			harvgreentib = 0, -- for counting green tiberium in harvester
-			harvesterObjectRef = SetObjectReference(self), -- set the object reference once instead of relying on GetRandomNumber()
-			-- 1 is green tiberium 0 is for blue
-			bar1 = nil, -- for tracking the bar one of the harvester
-			bar2 = nil, -- for tracking the bar two of the harvester
-			bar3 = nil, -- for tracking the bar three of the harvester
-			bar4 = nil -- for tracking the bar four of the harvester
-		}
-		return a, harvesterData[a]
+		local harvData = harvesterData[a]
+		if harvData == nil then 
+			harvData = {
+				totalFramesHarvested75Full = 0, -- total number of frames harvested since becoming >= 75% full of tiberium
+				frameOnHarvest75 = 0, -- the frame since becoming >= 75% full of tiberium
+				isHarvestingBlue = false, -- is harvesting blue tiberium or not
+				isAlreadyHarvesting = false, -- the harvester is already harvesting
+				lastCrystalHarvested = nil, -- object reference to the last crystal harvested
+				harvbluetib = 0, -- for counting blue tiberium in harvester
+				harvgreentib = 0, -- for counting green tiberium in harvester
+				harvesterObjectRef = SetObjectReference(self), -- set the object reference once instead of relying on GetRandomNumber()
+				-- 1 is green tiberium 0 is for blue
+				bar1 = nil, -- for tracking the bar one of the harvester
+				bar2 = nil, -- for tracking the bar two of the harvester
+				bar3 = nil, -- for tracking the bar three of the harvester
+				bar4 = nil -- for tracking the bar four of the harvester
+			}
+			harvesterData[a] = harvData
+		end
+		return a, harvData
 	end
 
 	return nil, nil
@@ -775,16 +780,20 @@ end
 function GetCrystalData(self)
 	if self ~= nil then 
 		local a = getObjectId(self)
-		crystalData[a] = crystalData[a] or {
-			firstHarvestedFrame = 0, -- the frame where the crystal begins to be harvested 
-			lastHarvestedFrame = nil, -- the frame where the crystal finishes being harvested
-			framesBeingHarvested = 0, -- the amount of frames the crystal has been harvested
-			crystalHasBeenReset = false, -- the crystal has undergone a reset
-			dontKillCrystal = false, -- flag to prevent the crystal from being killed with NAMED_KILL
-			beingHarvestedBy = nil, -- harvester thats currently harvesting this crystal
-			crystalObjectRef = SetObjectReference(self) -- set the object reference once instead of relying on GetRandomNumber()
-		}
-		return a, crystalData[a]
+		local crystal = crystalData[a]
+		if crystal == nil then
+			crystal = {
+				firstHarvestedFrame = 0, -- the frame where the crystal begins to be harvested 
+				lastHarvestedFrame = nil, -- the frame where the crystal finishes being harvested
+				framesBeingHarvested = 0, -- the amount of frames the crystal has been harvested
+				crystalHasBeenReset = false, -- the crystal has undergone a reset
+				dontKillCrystal = false, -- flag to prevent the crystal from being killed with NAMED_KILL
+				beingHarvestedBy = nil, -- harvester thats currently harvesting this crystal
+				crystalObjectRef = SetObjectReference(self) -- set the object reference once instead of relying on GetRandomNumber()
+			}
+			crystalData[a] = crystal
+		end
+		return a, crystal
 	end
 
 	return nil, nil
@@ -1121,28 +1130,22 @@ end
 -- ####################### REVERSE MOVE WORKAROUND ############################
 
 function GetUnitReversingData(self)
-	if self ~= nil then
-		local a = getObjectId(self)
-
-		-- check if this object is a harvester that can reverse move, returns true if so, else false.
-		local checkHarv = function()
-			local objectName = getObjectName(%self) 
-			local harvesters = {	
-				["3A3D109A"] = true,
-				["C3785BFE"] = true,
-				["21661DFB"] = true,
-				["D258354"] = true,
-				["F52AEEDF"] = true,
-				["C23B3A15"] = true
-			}
-
-			if harvesters[objectName] then
-				return true
-			end
-			return false
-		end
-
-		unitsReversing[a] = unitsReversing[a] or {
+	if self == nil then
+		return nil, nil
+	end
+	local a = getObjectId(self)
+	local unitReversing = unitsReversing[a]
+	
+	if unitReversing == nil then
+		local harvesters = {
+			["3A3D109A"] = true,
+			["C3785BFE"] = true,
+			["21661DFB"] = true,
+			["D258354"] = true,
+			["F52AEEDF"] = true,
+			["C23B3A15"] = true
+		}
+		unitReversing = {
 			firstFrame = 0, -- first frame after reversing while turning fast
 			isReverseMoving = false, -- flag to stop the re-assignment of firstFrame
 			timesTriggeredFast = 0, 
@@ -1165,11 +1168,11 @@ function GetUnitReversingData(self)
 			lastFrameMoveEnd = 0,
 			--isBeingFollowed = false,
 			beingFollowedBy = {},
-			isReverseMoveHarvester = checkHarv()
+			isReverseMoveHarvester = harvesters[getObjectName(self)] == true
 		}
-		return a, unitsReversing[a]
+		unitsReversing[a] = unitReversing 
 	end
-	return nil, nil
+	return a, unitReversing
 end
 
 -- Sets the initial frame when a unit fast turns while backing up, triggered by +BACKING_UP +TURN_LEFT_HIGH_SPEED
@@ -1321,6 +1324,7 @@ end
 function GettingOutOfTheWayEvent(self, other)
 	local selfId,unitReversingSelf = GetUnitReversingData(self)
 	local otherId,unitReversingOther = GetUnitReversingData(other)
+	if unitReversingSelf == nil or unitReversingOther == nil then return end
 	-- the object id of the unit matches the unit that broadcasted this event, concluding that a collision took place between that unit and the other.
 	if unitReversingSelf.unitAnchor ~= nil then
 		--WriteToFile("unitAnchor.txt",  tostring(unitReversingSelf.unitAnchor) .. "  " .. tostring(selfId) .. "\n")
@@ -1939,7 +1943,7 @@ end
 function OptimizedUnitAnchor(self, other)
 	local selfId, unitReversingSelf = GetUnitReversingData(self)
 	local otherId, unitReversingOther = GetUnitReversingData(other)
-
+	if unitReversingSelf == nil or unitReversingOther == nil then return end
 	-- if one of the two units is a harvester dont override the random anchor.
 	if unitReversingSelf.isReverseMoveHarvester == unitReversingOther.isReverseMoveHarvester then
 		if unitReversingSelf.groupId == unitReversingOther.groupId then
@@ -2174,6 +2178,7 @@ function GroupUnitOnDeath(self)
 				SetUnitAnchor(follower.selfReference, nil)
 			end
         end
+		 -- Relying only on Lua garbage collection causes multiplayer desyncs.
 		clearSubTables(unitReversing.beingFollowedBy)
   	end
 	RemoveFromUnitSelection(self)
@@ -3267,33 +3272,30 @@ sonicEmitterTable = {}
 
 function GetSonicEmitterAttributes(self)
 
-	local isSonicEmitter = function()
-		local objectName = getObjectName(%self) 
-		local sonicEmitters = {	
-			["CD0835A6"] = true, -- GDITerraformingStation
-			["89DA349"] = true, -- ZOCOMTerraformingStation
-		}
-		if sonicEmitters[objectName] then
-			return true
-		end
+	local objId = getObjectId(self)
+	local sonic = sonicEmitterTable[objId]
 
-		return false
+	if sonic == nil then 
+		local sonicEmitterTypes = {
+			["CD0835A6"] = true,
+			["89DA349"] = true
+		}
+		sonic = {
+			lastUnit = nil,
+			selfId = objId,
+			damagedFlag = false,
+			sonicEmitterType = sonicEmitterTypes[getObjectName(self)] == true, -- returns true if its a sonic emitter, else false
+			initialSetFrame = GetFrame(),
+			selfRef = self,
+			killedByEnemy = false,
+			hasGivenXP = false,
+			stringRef = SetObjectReference(self),
+			enableNormalDeathMode = false 
+		}
+		sonicEmitterTable[objId] = sonic
 	end
 
-	local ObjID = getObjectId(self)
-	sonicEmitterTable[ObjID] = sonicEmitterTable[ObjID] or {
-		lastUnit = nil,
-		selfId = ObjID,
-		damagedFlag = false,
-		sonicEmitterType = isSonicEmitter(), -- returns true if its a sonic emitter, else false
-		initialSetFrame = GetFrame(),
-		selfRef = self,
-		killedByEnemy = false,
-		hasGivenXP = false,
-		stringRef = SetObjectReference(self),
-		enableNormalDeathMode = false
-	}
-	return sonicEmitterTable[ObjID]
+	return sonic
 end
 
 function EnableNormalDeathMode(self)
@@ -3336,6 +3338,7 @@ function MakeSonicEmitterTempImmune(self)
 	local sonic = GetSonicEmitterAttributes(self)
 	sonic.initialSetFrame = GetFrame()
 	-- SPAWN OCL RIFLEMEN HERE (IF SOLD OR NOT), only for Sonic Emitters.
+	local isZoneShatterer = false
 	if sonic.sonicEmitterType then
 		ObjectCreateAndFireTempWeapon(self, "SpawnDestroyedSonicEmitter")
 		-- if the sonic emitter has been sold off
@@ -3356,6 +3359,7 @@ function MakeSonicEmitterTempImmune(self)
 	else 
 		if strfind(getObjectName(self), "AE73138F") ~= nil then
 			-- spawn zone shatterer rubble
+			isZoneShatterer = true
 			if not sonic.enableNormalDeathMode then
 				ObjectCreateAndFireTempWeapon(self, "SpawnDestroyedImprovedSonicTank")
 			else 
@@ -3373,7 +3377,9 @@ function MakeSonicEmitterTempImmune(self)
 		end
 	end
 
-	if not (ObjectTestModelCondition(self, "FIRING_A") or ObjectTestModelCondition(self, "USER_3")) then kill(self) end
+	if not (ObjectTestModelCondition(self, "FIRING_OR_PREATTACK_A") or (isZoneShatterer and ObjectTestModelCondition(self, "USER_3"))) 
+		then kill(self) 
+	end
 	--print("second life!")
 
 	-- this doesnt work after switching teams
@@ -3467,19 +3473,30 @@ function GiveExperiencePointsToKiller(self)
 		-- the squad horde object may already be gone while a surviving member landed the kill
 		if squad == nil then return end
 		--print("granting xp to squad")
-		ExecuteAction("UNIT_GIVE_EXPERIENCE_POINTS", squad.stringRef, xpReward)
+		if EvaluateCondition("NAMED_NOT_DESTROYED", squad.stringRef) then
+			ExecuteAction("UNIT_GIVE_EXPERIENCE_POINTS", squad.stringRef, xpReward)
+		end
 		--WriteToFile("xpsquad.txt",  "squad object: " .. tostring(squad) .. "\n")
 		-- and to all members
 		for squadMemberId,_ in squad.squadMembers do
-			ExecuteAction("UNIT_GIVE_EXPERIENCE_POINTS", squadMemberTable[squadMemberId].stringRef, xpReward)
+			local memberRef = squadMemberTable[squadMemberId].stringRef
+			if memberRef ~= nil and EvaluateCondition("NAMED_NOT_DESTROYED", memberRef) then
+				ExecuteAction("UNIT_GIVE_EXPERIENCE_POINTS", memberRef, xpReward)
+			end
 		end
 		-- the banner carrier is not part of squadMembers, award it separately
 		if squad.squadLeader ~= nil and squadMemberTable[squad.squadLeader] ~= nil then
-			ExecuteAction("UNIT_GIVE_EXPERIENCE_POINTS", squadMemberTable[squad.squadLeader].stringRef, xpReward)
+			local leaderRef = squadMemberTable[squad.squadLeader].stringRef
+			if leaderRef ~= nil and EvaluateCondition("NAMED_NOT_DESTROYED", leaderRef) then
+				ExecuteAction("UNIT_GIVE_EXPERIENCE_POINTS", leaderRef, xpReward)
+			end
 		end
 	else
 		-- for non squads , to avoid recreating references for the same unit im going to make the id of the ref the object reference
-		ExecuteAction("UNIT_GIVE_EXPERIENCE_POINTS", SetObjectReference(lastUnit), xpReward)
+		local lastUnitRef = SetObjectReference(lastUnit)
+		if EvaluateCondition("NAMED_NOT_DESTROYED", lastUnitRef) then
+			ExecuteAction("UNIT_GIVE_EXPERIENCE_POINTS", lastUnitRef, xpReward)
+		end
 	end
 
 	sonic.hasGivenXP = true
@@ -3506,13 +3523,17 @@ end
 
 function GetragedUnitProperties(self) 
 	local objId = getObjectId(self)
-	ragedUnits[objId] = ragedUnits[objId] or {
-		timesRaged = 0,
-		stringRef = SetObjectReference(self),
-		selfRef = self, 
-		dummyObjects = {}
-	}
-	return objId, ragedUnits[objId]
+	local ragedUnit = ragedUnits[objId]
+	if ragedUnit == nil then
+		ragedUnit = {
+			timesRaged = 0,
+			stringRef = SetObjectReference(self),
+			selfRef = self,
+			dummyObjects = {}
+		}
+		ragedUnits[objId] = ragedUnit
+	end
+	return objId, ragedUnit
 end
 
 -- maybe the dummy object could dispatch the lua event that way there will be a relationship between the dummy object and objects raged. when the dummy expires it should decrement the timesRaged property of the units it established a relationship with.
@@ -3523,7 +3544,7 @@ function GrantRageModifier(self, other)
 	
 	local _,ragedUnit = GetragedUnitProperties(self) 
 
-	--ExecuteAction("NAMED_FLASH_WHITE", self, 3)
+	ExecuteAction("NAMED_FLASH_WHITE", self, 3)
 	--ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "REALLYDAMAGED", 6, 100)
 
 	-- this unit was raged by this specific dummy object, add it to a subtable and increment the timesRaged counter.
@@ -3588,13 +3609,17 @@ end
 
 function GetPhasedUnitProperties(self) 
 	local objId = getObjectId(self)
-	phasedUnits[objId] = phasedUnits[objId] or {
-		timesPhased = 0,
-		stringRef = SetObjectReference(self),
-		selfRef = self, 
-		dummyObjects = {}
-	}
-	return objId, phasedUnits[objId]
+	local phasedUnit = phasedUnits[objId]
+	if phasedUnit == nil then
+		phasedUnit = {
+			timesPhased = 0,
+			stringRef = SetObjectReference(self),
+			selfRef = self,
+			dummyObjects = {}
+		}
+		phasedUnits[objId] = phasedUnit
+	end
+	return objId, phasedUnit
 end
 
 -- maybe the dummy object could dispatch the lua event that way there will be a relationship between the dummy object and objects phased. when the dummy expires it should decrement the timesPhased property of the units it established a relationship with.
@@ -3989,31 +4014,39 @@ end
 
 function GetSquadAttributes(self)
 	local objId = getObjectId(self)
-	squadTables[objId] = squadTables[objId] or {
-		--squadSize = 0
-		squadMembers = {},
-		squadLeader = nil,
-		stringRef = SetObjectReference(self),
-		selfRef = self,
-		spawnedSize = 0,
-		lastPromotedRank = 1,
-		lastPromotedFrame = 0,
-		unitsLostOnSpawn = {}, -- units lost while coming out of the barracks
-		confessorDisciple = nil -- on -INSIDE_GARRISON this object also gets the upgrade that grants that removed.
-	}
-	return objId, squadTables[objId]
+	local squad = squadTables[objId]
+	if squad == nil then
+		squad = {
+			--squadSize = 0
+			squadMembers = {},
+			squadLeader = nil,
+			stringRef = SetObjectReference(self),
+			selfRef = self,
+			spawnedSize = 0,
+			lastPromotedRank = 1,
+			lastPromotedFrame = 0,
+			unitsLostOnSpawn = {}, -- units lost while coming out of the barracks
+			confessorDisciple = nil -- on -INSIDE_GARRISON this object also gets the upgrade that grants that removed.
+		}
+		squadTables[objId] = squad
+	end
+	return objId, squad
 end
 
 function GetSquadMemberAttributes(self)
 	local objId = getObjectId(self)
-	squadMemberTable[objId] = squadMemberTable[objId] or {
-		squadObject = nil,
-		selfRef = self,
-		stringRef = SetObjectReference(self),
-		isLeader = false, 
-		timesPromotedWithLua = 0
-	}
-	return objId, squadMemberTable[objId]
+	local squadMember = squadMemberTable[objId]
+	if squadMember == nil then
+		squadMember = {
+			squadObject = nil,
+			selfRef = self,
+			stringRef = SetObjectReference(self),
+			isLeader = false,
+			timesPromotedWithLua = 0
+		}
+		squadMemberTable[objId] = squadMember
+	end
+	return objId, squadMember
 end
 
 -- self is the squad member, broadcasting events to horde members doesnt pass the reference of the horde object

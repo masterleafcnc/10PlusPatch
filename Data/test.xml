@@ -2,11 +2,41 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<Includes>
+		<!-- R25i -->
+		<Include source="GDI\Units\GDIMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="Neutral\Units\MutantMarauderGarrisoned.xml" type="all"/>
+		<!-- mothership fixes -->
+		<Include source="GlobalData/WeaponR21.xml" type="all"/>
+		<Include source="Reaper17\Units\Reaper17Mothership.xml" type="all" />
+		<Include source="traveler59\Units\Traveler59Mothership.xml" type="all" />
+		<Include source="Alien/Units/AlienMothership.xml" type="all" />
+		<!-- shatterer overload beam -->
+		<Include type="all" source="GlobalData/AttributeModifier.xml" />
+		<!-- repair drones -->
+		<Include type="all" source="RDrones.xml" />
+		<Include type="all" source="STMRTDrone.xml" />	
+		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
+		<!-- hammerheads -->
+		<Include source="ZOCOM\Units\ZOCOMHammerhead.xml" type="all"/>
+		<Include source="GDI\Units\GDIHammerhead.xml" type="all"/>
+		<Include source="SteelTalons\Units\STHammerhead.xml" type="all"/>
+
+		<Include source="GlobalData\LocomotorR25.xml" type="all"/>
+		<Include source="GlobalData/Locomotor.xml" type="all"/> 
+		<!-- R25h
+		 
 		<Include type="all" source="GDI\Props\GDIMjolnirStrikeProjectileStrike.xml" />
 		<Include source="GDI\Props\GDIShockwaveArtillerySeed.xml" type="all"/>	
 		<Include source="GlobalData\ExperienceLevelsR25.xml" type="all"/>
 		<Include source="GlobalData\experiencelevels.xml" type="all"/>
-		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
 		<Include source="GlobalData\upgrade.xml" type="all"/>
 		<Include source="New Objects\GDISonicTank.xml" type="all"/>	
 		<Include source="GlobalData\WeaponR25.xml" type="all"/>
@@ -30,12 +60,9 @@
 		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldierGarrisoned.xml" type="all"/>
 		<Include source="SteelTalons\Units\SteelTalonsMissileSoldierGarrisoned.xml" type="all"/>
 		<Include source="Neutral\Units\MutantMarauderGarrisoned.xml" type="all"/>
-
-
-		<!-- nod husks R25e -->
+		-->
 
 		<!-- assets changed in e764ecf9e0493545462179bab6b83662288cb212
-		<Include type="all" source="GlobalData/AttributeModifier.xml" />
 		<Include type="all" source="BlackHand\Units\BlackHandCustomWarmechHusk.xml" />
 		<Include type="all" source="MarkedOfKane\Units\MoKAvatarHusk.xml" />
 		<Include type="all" source="Nod\Units\NODAvatarHusk.xml" />
@@ -103,6 +130,7 @@
 		<Include source="GDI\Units\GDIDigInBuilding.xml" type="all"/> -->
 		<!--
 		<Include source="ZOCOM\Units\ZOCOMImprovedSonicTankRubble.xml" type="all"/>
+		<Include type="all" source="RDrones.xml" />
 		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
 		<Include source="GDI\Units\GDISonicTankRubble.xml" type="all"/>
 		<Include source="BlackHand\Structures\BlackHandShredderTurretHub.xml" type="all"/>	
@@ -131,7 +159,6 @@
 		<Include source="MarkedOfKane\Units\MarkedOfKaneMilitantRocketSquad.xml" type="all"/>
 
 		<Include source="GlobalData\SpecialPowerTemplates.xml" type="all"/>
-		<Include type="all" source="GlobalData\LocomotorR25.xml" />
 		<Include source="BountyDummyEmitter.xml" type="all"/>
 		<Include source="BountyDummyShatterer.xml" type="all"/>
 		<Include source="CreateHuskEffect.xml" type="all"/>
@@ -193,7 +220,6 @@
 		<Include source="Alien\Structures\AlienDronePlatform.xml" type="all"/>
 		<Include source="Alien\Units\AlienMCV.xml" type="all"/>
 		<Include source="GlobalData\upgrade.xml" type="all"/>
-		<Include source="GlobalData\LocomotorR25.xml" type="all"/>
 		<Include source="GDI\Units\GDIZoneInf.xml" type="all"/>
 		<Include source="BlackHand\Structures\BHTibChemPlant.xml" type="all"/>
 		<Include source="GDI\Structures\GDIAirTower.xml" type="all"/>
@@ -219,7 +245,7 @@
 		<Include source="GlobalData\ZoneRaiderWeaponsR25.xml" type="all"/>
 		<Include source="ZOCOM\Units\ZOCOMZoneRaiderGarrisoned.xml" type="all"/>
 
-		<Include source="ZOCOM\Units\ZOCOMHammerhead.xml" type="all"/>
+
 		<Include source="CGF\ZOCOMRifleSoldierSquad.xml" type="all"/>
 		<Include source="Nod\Units\NodRedeemer.xml" type="all"/>
 		<Include source="RageDummy.xml" type="all"/>
@@ -230,6 +256,7 @@
 		<Include source="CGF\STRifleSoldierSquads.xml" type="all"/>
 		<Include source="CGF\STMissileSoldierSquads.xml" type="all"/>
 
+		<Include type="all" source="RDrones.xml" />
 		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
 		<Include source="KillSonicObjectTimer.xml" type="all"/>
 		<Include source="GDI\Structures\GDITerraformingStationRubble.xml" type="all"/>
@@ -272,16 +299,12 @@
 		<Include source="ZOCOM\Units\ZOCOMV35Ox_Summoned.xml" type="all"/>
 		<Include source="GDI\Units\GDIZoneInf.xml" type="all"/>
 		<Include source="GDI\Structures\gdicommandpost.xml" type="all"/>
-		<Include source="GDI\Units\GDIHammerhead.xml" type="all"/>
 		<Include source="GDI\Units\GDISniper.xml" type="all"/>
 		<Include source="GDI\Units\GDISpotter.xml" type="all"/>
 		<Include type="all" source="Alien\Units\alienplanetaryassaultcarrier.xml" />
 		<Include source="Alien\Units\AlienRazorDrones.xml" type="all"/>
 
 		<Include source="CGF\GDIMissileSoldierSquad.xml" type="all"/>
-
-
-		<Include source="GlobalData/WeaponR21.xml" type="all"/>
 		<Include source="GlobalData\Armor.xml" type="all"/>
 		
 		<Include type="all" source="GDI\Structures\gdimedicalbay.xml" />
@@ -416,9 +439,6 @@
 		<Include source="Tiberium/TiberiumFieldBlue.xml" type="all"/>
 		<Include source="Tiberium/TiberiumFieldBlueSeeded.xml" type="all"/>
 		<Include source="ZOCOM\Units\ZOCOMHammerhead.xml" type="all"/>
-		<Include source="Reaper17\Units\Reaper17Mothership.xml" type="all" />
-		<Include source="traveler59\Units\Traveler59Mothership.xml" type="all" />
-		<Include source="Alien/Units/AlienMothership.xml" type="all" />
 		<Include source="GlobalData/upgrade.xml" type="all" />
 		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>
 		<Include source="Nod\Units\NODHarvester.xml" type="all"/>	 -->
@@ -430,8 +450,7 @@
 		<Include source="ZOCOM/Structures/ZOCOMSpaceCommandUplink.xml" type="all"/>
 		<Include source="BlackHand/Units/blackhandmobileartillery.xml" type="all"/>
 		<Include source="Nod/Units/nodmobileartillery.xml" type="all"/>
-		<Include source="MarkedOfKane/Units/markedofkanemobileartillery.xml" type="all"/>
-		<Include source="GlobalData/Locomotor.xml" type="all"/>  -->
+		<Include source="MarkedOfKane/Units/markedofkanemobileartillery.xml" type="all"/> -->
 
 
 		<!--
@@ -466,11 +485,6 @@
 		<Include type="all" source="GlobalData/Armor.xml" />
 		<Include type="all" source="GlobalData/WeaponR21.xml" />
 		<Include type="all" source="GlobalData/upgrade.xml" /> -->
-
-
-
-
-		
 		<!-- Reverse move speed buff updated units 
 		<Include source="Alien/Units/alienseekertank.xml" type="all"/> 	
 		<Include source="GlobalData/AttributeModifier.xml" type="all" />
@@ -492,6 +506,7 @@
 		<Include source="CGF\T59Gunwalker.xml" type="all"/>
 		<Include source="CGF\ZOCOMPitbull.xml" type="all"/>
 		<Include source="CGF\ZOCOMPred.xml" type="all"/>
+		<Include type="all" source="RDrones.xml" />
 		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
 		<Include source="GDI\Units\GDIAPCVeteran.xml" type="all"/>
 		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>
