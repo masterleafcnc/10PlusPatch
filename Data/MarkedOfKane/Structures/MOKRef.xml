@@ -21,7 +21,7 @@
 		BountyValue="0"
 		BuildTime="30"
 		BuildFadeInOnCreateTime="0"
-		EnergyProduction="-15"
+		EnergyProduction="-6"
 		EnergyBonus="0"
 		CommandSet="NODRefineryCommandSet"
 		SelectPortrait="Portrait_NODRefinery"
