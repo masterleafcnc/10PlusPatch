@@ -358,7 +358,7 @@
 			VisionRange="200"
 			ShroudClearingRange="400" />
 		<ProjectedBuildabilityInfo
-			Radius="240"
+			Radius="360"
 			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE"
 			ModelConditionsToReject="STRUCTURE_UNPACKING" />
 	</GameObject>
