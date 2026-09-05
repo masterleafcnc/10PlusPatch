@@ -363,7 +363,7 @@
 	<ExperienceLevelTemplate
 		id="Traveler59ExplorerExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="1300"
+		ExperienceAward="1500"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
@@ -384,7 +384,7 @@
 	<ExperienceLevelTemplate
 		id="Reaper17ExplorerExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="1300"
+		ExperienceAward="1500"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
@@ -405,7 +405,7 @@
 	<ExperienceLevelTemplate
 		id="AlienExplorerExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="1300"
+		ExperienceAward="1500"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
@@ -428,7 +428,7 @@
 	<ExperienceLevelTemplate
 		id="MarkedOfKaneEmissaryExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="1300"
+		ExperienceAward="1500"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
@@ -452,7 +452,7 @@
 	<ExperienceLevelTemplate
 		id="BlackHandEmissaryExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="1300"
+		ExperienceAward="1500"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
@@ -476,7 +476,7 @@
 	<ExperienceLevelTemplate
 		id="NODEmissaryExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="1300"
+		ExperienceAward="1500"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
@@ -502,7 +502,7 @@
 	<ExperienceLevelTemplate
 		id="ZOCOMSurveyorExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="1300"
+		ExperienceAward="1500"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
@@ -523,7 +523,7 @@
 	<ExperienceLevelTemplate
 		id="SteelTalonsSurveyorExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="1300"
+		ExperienceAward="1500"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
@@ -544,7 +544,7 @@
 	<ExperienceLevelTemplate
 		id="GDISurveyorExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="1300"
+		ExperienceAward="1500"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
