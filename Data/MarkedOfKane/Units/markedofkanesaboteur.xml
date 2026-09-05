@@ -67,7 +67,7 @@
 		UnitTypeIcon="EngineerIcon"
 		ReinvisibilityDelay="4s"
 		WorldMapArmoryUpgradesAllowed="Upgrade_MarkedOfKaneCyberneticLegs"
-		CaptureTime="3s"
+		CaptureTime="1s"
 		BuildCost="500"
 		RefundValue="0"
 		ThreatValue="0"

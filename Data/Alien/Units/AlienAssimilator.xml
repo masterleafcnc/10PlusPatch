@@ -21,7 +21,7 @@
 		Description="Desc:AlienAssimilator"
 		TypeDescription="Type:AlienAssimilator"
 		UnitTypeIcon="EngineerIcon"
-		CaptureTime="3s">
+		CaptureTime="1s">
 		<DisplayName>NAME:ALIENAssimilator</DisplayName>
 		<ArmorSet
 			Armor="AlienAssimilatorArmor"

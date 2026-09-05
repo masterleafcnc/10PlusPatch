@@ -22,7 +22,7 @@
 		Description="Desc:BlackHandSaboteur"
 		TypeDescription="Type:BlackHandSaboteur"
 		UnitTypeIcon="EngineerIcon"
-		CaptureTime="3s">
+		CaptureTime="1s">
 		<DisplayName>Name:NODSaboteur</DisplayName>
 		<ArmorSet
 			Armor="NODSaboteurArmor"

@@ -22,7 +22,7 @@
 		Description="Desc:GDIEngineer"
 		TypeDescription="Type:GDIEngineer"
 		UnitTypeIcon="EngineerIcon"
-		CaptureTime="3s">
+		CaptureTime="1s">
 		<DisplayName>Name:GDIEngineer</DisplayName>
 		<!--<Prerequisites
 			Object="GDIBarracks" />-->

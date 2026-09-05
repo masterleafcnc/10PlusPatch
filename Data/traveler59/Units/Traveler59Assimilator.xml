@@ -22,7 +22,7 @@
 		TypeDescription="Type:AlienAssimilator"
 		UnitTypeIcon="EngineerIcon"
 		WorldMapArmoryUpgradesAllowed="Upgrade_Traveler59AdvancedArticulators"
-		CaptureTime="3s">
+		CaptureTime="1s">
 		<DisplayName>NAME:ALIENAssimilator</DisplayName>
 		<DisplayUpgrade>Upgrade_Traveler59AdvancedArticulators</DisplayUpgrade>	
 		<ArmorSet
