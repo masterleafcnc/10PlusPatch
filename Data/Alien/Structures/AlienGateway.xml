@@ -1315,7 +1315,7 @@
 			MaxVisionBonusPercent="50%"
 			MinVisionBonusPercent="-50%" />
 		<ProjectedBuildabilityInfo
-			Radius="0"
+			Radius="250"
 			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE"
 			StatusToReject=""
 			ModelConditionsToReject="" />

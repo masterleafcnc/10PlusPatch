@@ -699,7 +699,7 @@
 			VisionRange="100"
 			ShroudClearingRange="400" />
 		<ProjectedBuildabilityInfo
-			Radius="0"
+			Radius="250"
 			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
 	</GameObject>
 </AssetDeclaration>
