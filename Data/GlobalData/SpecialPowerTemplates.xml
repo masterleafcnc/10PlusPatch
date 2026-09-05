@@ -2,6 +2,21 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<SpecialPowerTemplate
+		id="SpecialPowerRedShadowStrikeTeam"
+		Flags="NOT_CLIFF_CELL IS_PLAYER_POWER SHARED_SYNC"
+		ReloadTime="180s"
+		RadiusCursorRadius="30"
+		TargetType="LOCATION"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		Money="-1800"
+		InitiateAtLocationSound="AudioEvent:NOD_Shadow_VoiceStrikeTeamCreate">
+		<!--		<GameDependency>
+			<RequiredObject>NODSecretShrine</RequiredObject>
+		</GameDependency>
+-->
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
 		id="NodRageGenerator"
 		ReloadTime="75s"
 		TargetType="NONE"
