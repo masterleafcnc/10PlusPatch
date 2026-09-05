@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<WeaponTemplate
+		id="NODAirDispenserBombWarhead"
+		Name="NODAirDispenserBombWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		>
+		<Nuggets>
+			<DamageNugget
+				Damage="10000"
+				DamageTaperOff="5"
+				Radius="200"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DeathType="BURNED" />
+		</Nuggets>
+	</WeaponTemplate>
+
 	<!-- The main explosion when the missile hits -->
 	<WeaponTemplate
 		id="NODCatalystMissileWeapon"
