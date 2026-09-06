@@ -33,7 +33,7 @@
 		</Nuggets>
 	</WeaponTemplate>
 
-	<!-- The main explosion when the missile hits -->
+	<!-- Catalyst buff -->
 	<WeaponTemplate
 		id="NODCatalystMissileWeapon"
 		Name="NODCatalystMissileWeapon"
@@ -53,35 +53,42 @@
 						Include="TIBERIUM">
 					</Filter>
 				</DamageScalarDetails>
+				<!-- vs Harvesters -->
+				<DamageScalarDetails Scalar= "3000%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>GDIHarvester</IncludeThing>
+						<IncludeThing>ZOCOMHarvester</IncludeThing>
+						<IncludeThing>SteelTalonsHeavyHarvester</IncludeThing>
+						<IncludeThing>NODHarvester</IncludeThing>
+						<IncludeThing>BlackHandHarvester</IncludeThing>
+						<IncludeThing>MarkedOfKaneHarvester</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<!-- vs Refs/Silos -->
 				<DamageScalarDetails Scalar= "5000%">
 					<Filter
 						Rule="NONE"
 						Include="TIBERIUM_BASED"
 						Exclude="TIBERIUM">
 						<IncludeThing>GDITiberiumSilo</IncludeThing>
-						<IncludeThing>GDIHarvester</IncludeThing>
 						<IncludeThing>GDIRefinery</IncludeThing>
 						<IncludeThing>ZOCOMTiberiumSilo</IncludeThing>
-						<IncludeThing>ZOCOMHarvester</IncludeThing>
 						<IncludeThing>ZOCOMRefinery</IncludeThing>
 						<IncludeThing>SteelTalonsTiberiumSilo</IncludeThing>
-						<IncludeThing>SteelTalonsHeavyHarvester</IncludeThing>
 						<IncludeThing>SteelTalonsRefinery</IncludeThing>
 						<IncludeThing>NODTiberiumSilo</IncludeThing>
-						<IncludeThing>NODHarvester</IncludeThing>
 						<IncludeThing>NODRefinery</IncludeThing>
 						<IncludeThing>NODTiberiumLiquidationFacility</IncludeThing>
 						<IncludeThing>BlackHandTiberiumSilo</IncludeThing>
-						<IncludeThing>BlackHandHarvester</IncludeThing>
 						<IncludeThing>BlackHandRefinery</IncludeThing>
 						<IncludeThing>BlackHandTiberiumLiquidationFacility</IncludeThing>
 						<IncludeThing>MarkedOfKaneTiberiumSilo</IncludeThing>
-						<IncludeThing>MarkedOfKaneHarvester</IncludeThing>
 						<IncludeThing>MarkedOfKaneRefinery</IncludeThing>
 						<IncludeThing>MarkedOfKaneTiberiumLiquidationFacility</IncludeThing>
 					</Filter>
-				</DamageScalarDetails>
-			</DamageNugget>
+				</DamageScalarDetails>				
+			</DamageNugget>				
 
 			<FireOnObjectsNugget
 				Radius="200.0"
