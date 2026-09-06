@@ -683,7 +683,7 @@
 			</EngineerContain>
 			<CreateObjectDie
 				id="34FD1923"
-				CreationList="OCL_GenericAlienBuildingDestruction">
+				CreationList="OCL_StasisChamberAlienBuildingDestruction">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""
@@ -696,7 +696,7 @@
 			</CreateObjectDie>
 			<CreateObjectDie
 				id="4BF392A4"
-				CreationList="OCL_GenericAlienBuildingSuicide">
+				CreationList="OCL_StasisChamberAlienBuildingSuicide">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""

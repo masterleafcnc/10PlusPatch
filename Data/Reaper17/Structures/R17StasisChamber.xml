@@ -683,7 +683,7 @@
 			</EngineerContain>
 			<CreateObjectDie
 				id="34FD1923"
-				CreationList="OCL_GenericReaper17BuildingDestruction">
+				CreationList="OCL_StasisChamberReaper17BuildingDestruction">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""
@@ -698,7 +698,7 @@
 			</CreateObjectDie>
 			<CreateObjectDie
 				id="4BF392A4"
-				CreationList="OCL_GenericReaper17BuildingSuicide">
+				CreationList="OCL_StasisChamberReaper17BuildingSuicide">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""

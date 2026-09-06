@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	
+
+	<!-- Stasis Chambers: two Shock Troopers on sale, one on destruction. -->
+	<ObjectCreationList
+		id="OCL_StasisChamberAlienBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="34"
+			MaxHordeDensity="34">
+			<CreateObject>AlienShockTrooperSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_StasisChamberAlienBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHordeDensity="67"
+			MaxHordeDensity="67">
+			<CreateObject>AlienShockTrooperSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_StasisChamberReaper17BuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="34"
+			MaxHordeDensity="34">
+			<CreateObject>Reaper17ShockTrooperSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_StasisChamberReaper17BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHordeDensity="67"
+			MaxHordeDensity="67">
+			<CreateObject>Reaper17ShockTrooperSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_StasisChamberTraveler59BuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="34"
+			MaxHordeDensity="34">
+			<CreateObject>Traveler59ShockTrooperSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_StasisChamberTraveler59BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHordeDensity="67"
+			MaxHordeDensity="67">
+			<CreateObject>Traveler59ShockTrooperSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+</AssetDeclaration>
