@@ -1088,7 +1088,7 @@
 			</EngineerContain>
 			<CreateObjectDie
 				id="34FD1923"
-				CreationList="OCL_GenericZOCOMBuildingDestruction">
+				CreationList="OCL_ArmoryZOCOMBuildingDestruction">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""
@@ -1103,7 +1103,7 @@
 			</CreateObjectDie>
 			<CreateObjectDie
 				id="4BF392A4"
-				CreationList="OCL_GenericZOCOMBuildingSuicide">
+				CreationList="OCL_ArmoryZOCOMBuildingSuicide">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""

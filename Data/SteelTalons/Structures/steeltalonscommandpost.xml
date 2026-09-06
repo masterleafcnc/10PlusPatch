@@ -1116,7 +1116,7 @@
 			</EngineerContain>
 			<CreateObjectDie
 				id="34FD1923"
-				CreationList="OCL_GenericSteelTalonsBuildingDestruction">
+				CreationList="OCL_ArmorySteelTalonsBuildingDestruction">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""
@@ -1131,7 +1131,7 @@
 			</CreateObjectDie>
 			<CreateObjectDie
 				id="4BF392A4"
-				CreationList="OCL_GenericSteelTalonsBuildingSuicide">
+				CreationList="OCL_ArmorySteelTalonsBuildingSuicide">
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""
