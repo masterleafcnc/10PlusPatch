@@ -88,4 +88,57 @@
 		</CreateObject>
 	</ObjectCreationList>
 
+	<!-- Secret Shrines: faction Shadow Teams, full squads on sale. -->
+	<ObjectCreationList
+		id="OCL_SecretShrineNODBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>NODShadowSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_SecretShrineNODBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>NODShadowSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_SecretShrineMarkedOfKaneBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="30"
+			MaxHordeDensity="90">
+			<CreateObject>MarkedOfKaneShadowSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_SecretShrineMarkedOfKaneBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			TempModelCondition="USER_10"
+			TempModelConditionTime="1.0s">
+			<CreateObject>MarkedOfKaneShadowSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
 </AssetDeclaration>

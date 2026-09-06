@@ -2,6 +2,21 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<WeaponTemplate
+		id="NODExplosiveChargeWeapon"
+		Name="NODExplosiveChargeWeapon"
+		RadiusDamageAffects="ENEMIES NEUTRALS NOT_SIMILAR"
+		FireFX="FX_NODBombHit">
+		<Nuggets>
+			<DamageNugget
+				Damage="2000.0"
+				Radius="40.0"
+				DamageType="GRENADE"
+				DeathType="TOPPLED" >
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
 		id="NODAirDispenserBombWarhead"
 		Name="NODAirDispenserBombWarhead"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
