@@ -276,6 +276,13 @@
 					DeathTypes="ALL"
 					DeathTypesForbidden="SUICIDED" />
 			</CreateObjectDie>
+			<CreateObjectDie
+				id="ModuleTag_CreateOccupiedDie"
+				CreationList="OCL_GenericSteelTalonsBuildingDestruction">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="SUICIDED DETONATED" />
+			</CreateObjectDie>
 			<SlowDeath
 				id="ModuleTag_Death"
 				SinkDelay="3.0s"
