@@ -7,10 +7,6 @@ The 1.00+ Patch is based on the R25i Patch. See the [R21–R25 changelog](https:
 #### Global
 
 - All changes from R25i and previous versions have been applied (see the changelog linked above).
-- Multiplayer colors updated.
-- New maps added: Desert Field [2]; Deadweight [2]; South Pacific [4]; Tiberium Freezes Over [4]; Dry Heat [4]; Arctic Circle [4]; Twisted Meadows [4]; Arabia [4]; Lost Temple [4]; The Second Tiberium [2]; Tiberium Desolation [6].
-- New neutral building added on the map Sewer Wars [2].
-- Maps updated: Sattelite Siege [2]; Island's Temple [2]; Tournament Island [2]; Sewer Wars [2]; Phosphor Winter [2]; Fall In Winter [2].
 
 #### Nod
 
