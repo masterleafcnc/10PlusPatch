@@ -1,6 +1,309 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- stormrider xp for 1400$ change -->
+
+	<ExperienceLevelTemplate
+		id="AlienStormriderExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienStormrider</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienStormriderExperienceLevel_2"
+		Prerequisite="AlienStormriderExperienceLevel_1"
+		RequiredExperience="4200"
+		ExperienceAward="1820"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_01" />
+		<Target>AlienStormrider</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienStormriderExperienceLevel_3"
+		Prerequisite="AlienStormriderExperienceLevel_2"
+		RequiredExperience="8400"
+		ExperienceAward="2240"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_02" />
+		<Target>AlienStormrider</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienStormriderExperienceLevel_4"
+		Prerequisite="AlienStormriderExperienceLevel_3"
+		RequiredExperience="12600"
+		ExperienceAward="2800"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_03" />
+		<Target>AlienStormrider</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+
+	<!-- r17 stormrider -->
+
+	<ExperienceLevelTemplate
+		id="Reaper17StormriderExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>Reaper17Stormrider</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="Reaper17StormriderExperienceLevel_2"
+		Prerequisite="Reaper17StormriderExperienceLevel_1"
+		RequiredExperience="4200"
+		ExperienceAward="1820"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_01" />
+		<Target>Reaper17Stormrider</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="Reaper17StormriderExperienceLevel_3"
+		Prerequisite="Reaper17StormriderExperienceLevel_2"
+		RequiredExperience="8400"
+		ExperienceAward="2240"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_02" />
+		<Target>Reaper17Stormrider</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="Reaper17StormriderExperienceLevel_4"
+		Prerequisite="Reaper17StormriderExperienceLevel_3"
+		RequiredExperience="12600"
+		ExperienceAward="2800"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_03" />
+		<Target>Reaper17Stormrider</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+
+	<!-- t59 stormrider -->
+
+	<ExperienceLevelTemplate
+		id="Traveler59StormriderExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>Traveler59Stormrider</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="Traveler59StormriderExperienceLevel_2"
+		Prerequisite="Traveler59StormriderExperienceLevel_1"
+		RequiredExperience="4200"
+		ExperienceAward="1820"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_01" />
+		<Target>Traveler59Stormrider</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="Traveler59StormriderExperienceLevel_3"
+		Prerequisite="Traveler59StormriderExperienceLevel_2"
+		RequiredExperience="8400"
+		ExperienceAward="2240"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_02" />
+		<Target>Traveler59Stormrider</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="Traveler59StormriderExperienceLevel_4"
+		Prerequisite="Traveler59StormriderExperienceLevel_3"
+		RequiredExperience="12600"
+		ExperienceAward="2800"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_03" />
+		<Target>Traveler59Stormrider</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+
 
 	<!-- shadow teams-->
 
