@@ -266,6 +266,11 @@
 					DeathTypes="ALL"
 					DeathTypesForbidden="SUICIDED DETONATED" />
 			</CreateObjectDie>
+			<CreateObjectDie
+				id="ModuleTag_CreateOccupiedSuicide"
+				CreationList="OCL_GenericNodBuildingSuicide">
+				<DieMuxData DeathTypes="SUICIDED" />
+			</CreateObjectDie>
 			<SlowDeath
 				id="ModuleTag_Death"
 				SinkDelay="3.0s"
