@@ -2,6 +2,10 @@
 
 The 1.00+ Patch is based on the R25i Patch. See the [R21–R25 changelog](https://docs.google.com/document/d/1LMfH_2jcBjOpHu4E0ZB7yAgqojlhO2nA55yLw-DXzMM/edit?tab=t.0) for the changes made in those versions.
 
+<p align="center">
+  <img src="images/10plusbig.jpg" style="width: 705;" alt="10plusbig">
+</p>
+
 ## Changelog
 
 #### Global
