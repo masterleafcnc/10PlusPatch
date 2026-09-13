@@ -3,3 +3,5 @@ filees to be in test.txt
 *.txt
 Data/test.xml
 
+Data/test2.xml
+Data/StaticGameObjects.xml
