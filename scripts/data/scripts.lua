@@ -1,4 +1,4 @@
--- ============================ SCRIPT VERSION R25i ============================
+-- ============================ SCRIPT VERSION R25j ============================
 -- Note that global vars cannot be accessed via subfunctions!!
 squadtable = {} -- tracks all squad objects on map
 commandeertable = {} -- tracks units commandeered by avatar 
@@ -3544,7 +3544,7 @@ function GrantRageModifier(self, other)
 	
 	local _,ragedUnit = GetragedUnitProperties(self) 
 
-	ExecuteAction("NAMED_FLASH_WHITE", self, 3)
+	--ExecuteAction("NAMED_FLASH_WHITE", self, 3)
 	--ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "REALLYDAMAGED", 6, 100)
 
 	-- this unit was raged by this specific dummy object, add it to a subtable and increment the timesRaged counter.
@@ -3633,7 +3633,7 @@ function GrantPhaseModifier(self, other)
 
 	-- this unit was phased by this specific dummy object, add it to a subtable and increment the timesPhased counter.
 	local dummyObjectId = getObjectId(other)
-	if phasedUnit ~= nil and EvaluateCondition("NAMED_NOT_DESTROYED", phasedUnit.stringRef) then
+	if phasedUnit ~= nil and EvaluateCondition("NAMED_NOT_DESTROYED", phasedUnit.stringRef) and not EvaluateCondition("UNIT_HAS_OBJECT_STATUS", phasedUnit.stringRef, 46) then
 		if phasedUnit.dummyObjects[dummyObjectId] == nil then
 			phasedUnit.dummyObjects[dummyObjectId] = true
 			phasedUnit.timesPhased = phasedUnit.timesPhased + 1
